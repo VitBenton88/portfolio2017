@@ -1,0 +1,81 @@
+body {
+	font-family: 'Droid Sans', sans-serif;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+.navbar-default {
+	background: none;
+	border: none;
+}
+
+nav {
+	color: white;
+}
+
+.parallax1 { 
+    /* The image used */
+    background-image: url("images/selfieBW.jpg");
+
+    /* Full height & width */
+    height: 100%;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax2 { 
+    /* The image used */
+    background-image: url("images/dino.jpg");
+
+    /* Full height & width */
+    height: 100%;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax h1 {
+	text-align: center;
+	color: white;
+	padding-top: 150px;
+	padding-bottom: 150px;
+	margin: 0px;
+}
+
+#bio {
+	background: linear-gradient(to bottom right, #3f6379, #9f6379);
+	height: auto;
+	text-align: center;
+	padding: 60px;
+	color: white;
+	font-size: 16px;
+}
+
+#Portfolio {
+	background: linear-gradient(to bottom right, #9f6379, #ff6379);
+	height: auto;
+	text-align: center;
+	padding: 60px;
+	color: white;
+	font-size: 16px;
+}
+
+h1 span {
+	background: linear-gradient(to right, rgba(255,0,0,0), #9f6379);
+}
