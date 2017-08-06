@@ -1,5 +1,6 @@
 body {
 	font-family: 'Droid Sans', sans-serif;
+    background-color: #080808;
 }
 
 .navbar .navbar-nav {
@@ -20,7 +21,13 @@ nav {
 	color: white;
 }
 
-.parallax1 { 
+.topDiv {
+     height:100vh;
+     background-image: url("images/bulb.jpg");
+     background-size: cover;
+}
+
+.bioParallax { 
     /* The image used */
     background-image: url("images/selfieBW.jpg");
 
@@ -35,7 +42,7 @@ nav {
     background-size: cover;
 }
 
-.parallax2 { 
+.portfolioParallax { 
     /* The image used */
     background-image: url("images/dino.jpg");
 
@@ -67,7 +74,7 @@ nav {
 	font-size: 16px;
 }
 
-#Portfolio {
+#portfolioText {
 	background: linear-gradient(to bottom right, #9f6379, #ff6379);
 	height: auto;
 	text-align: center;
@@ -75,6 +82,19 @@ nav {
 	color: #f2f2f2;
 	font-size: 16px;
 }
+
+#portfolioChart {
+    background-color: black;
+    height: auto;
+    text-align: center;
+    padding: 60px;
+    color: #f2f2f2;
+    font-size: 16px;
+}
+
+#chartWrap {
+    padding-top: 20px;
+};
 
 h1 span {
 	background: linear-gradient(to right, rgba(255,0,0,0), #9f6379);
