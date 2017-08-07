@@ -7,26 +7,38 @@ $(document).ready(function() {
 
 $( window ).load(function() {
 
-	var htmlData = 90;
+	var htmlData = 80;
 	var cssData = 70;
-	var jsData = 70;
+	var bootsrapData = 40;
+	var jsData = 50;
+	var jqueryData = 70;
+	var ajaxData = 50;
+	var firebaseData = 30;
 	var ctx = $("#myChart");		
 
 	var myChart = new Chart(ctx, {
 	    type: 'bar',
 	    data: {
-	        labels: ["HTML5", "CSS3", "Javascript"],
+	        labels: ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "AJAX", "Google Firebase"],
 	        datasets: [{
-	            data: [htmlData, cssData, jsData],
+	            data: [htmlData, cssData, bootsrapData, jsData, jqueryData, ajaxData, firebaseData],
 	            backgroundColor: [
-	                'rgba(255, 99, 132, 0.2)',
-	                'rgba(54, 162, 235, 0.2)',
-	                'rgba(255, 206, 86, 0.2)',
+	                'rgba(237, 95, 40, 0.4)',
+	                'rgba(40, 171, 226, 0.4)',
+	                'rgba(86, 61, 124, 0.4)',
+	                'rgba(247, 223, 30, 0.4)',
+	                'rgba(20, 43, 70, 0.4)',
+	                'rgba(255, 255, 255, 0.4)',
+	                'rgba(255, 203, 43, 0.4)',
 	            ],
 	            borderColor: [
-	                'rgba(255,99,132,1)',
-	                'rgba(54, 162, 235, 1)',
-	                'rgba(255, 206, 86, 1)',
+	                'rgba(227,76,38,1)',
+	                'rgba(0, 113, 188, 1)',
+	                'rgba(255, 255, 255, 1)',
+	                'rgba(0, 0, 0, 1)',
+	                'rgba(255, 255, 255, 1)',
+	                'rgba(40, 171, 226, 1)',
+	                'rgba(245, 130, 12, 1)',
 	            ],
 	            borderWidth: 1
 	        }]
