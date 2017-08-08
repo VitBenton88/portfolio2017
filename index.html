@@ -43,9 +43,11 @@
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
 	      <ul class="nav navbar-nav">
-	        <li class="active"><a href="index.html">About</a></li>
-	        <li><a href="#">Portfolio</a></li>
-	        <li><a href="#">Contact</a></li>
+	      	<li><a href=".header">Home</a></li>
+	        <li><a href=".bioParallax">About</a></li>
+	        <li><a href=".portfolioParallax">Portfolio</a></li>
+	        <li><a href=".resume">Resume</a></li>
+	        <li><a href=".contact">Contact</a></li>
 	      </ul>
 	    </div><!-- /.navbar-collapse -->
 	  </div><!-- /.container-fluid -->
@@ -53,7 +55,7 @@
 
 	<div class="container-fluid">
 
-		<div class="row topDiv">
+		<div class="row header">
 
 			<h1>Hi, I'm Vitek Benton</h1>
 
@@ -62,13 +64,13 @@
 		<div class="row">
 
 			<div class="parallax bioParallax">
-				<h1><span>About Me</span></h1>
+				<h1><span id="mainHeader">About Me</span></h1>
 			</div>
 		</div>
 
-		<div class="row">
+		<div class="row bio">
 
-			<div id="bio">
+			<div id="bioWrap">
 				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
 			</div>
 
@@ -77,14 +79,14 @@
 		<div class="row">
 
 			<div class="parallax portfolioParallax">
-				<h1><span>Portfolio</span></h1>
+				<h1><span id="mainHeader">Portfolio</span></h1>
 			</div>
 
 		</div>
 
-		<div class="row">
+		<div class="row portfolio">
 
-			<div id="portfolioText">
+			<div id="portfolioWrap">
 				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
 			</div>
 
@@ -92,8 +94,9 @@
 
 		<div class="row">
 
-			<div id="portfolioCart">
-				<div class="col-md-6">
+			<div id="portfolioChart">
+				<h2>Checkout What I Know ...</h2>
+				<div class="col-lg-8 col-md-offset-1 col-md-6 col-md-offset-1">
 					<div id="chartWrap">
 						<canvas id="myChart"></canvas>
 					</div>

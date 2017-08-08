@@ -21,15 +21,16 @@ nav {
 	color: white;
 }
 
-.topDiv {
+.header {
      height:100vh;
-     background-image: url("images/bulb.jpg");
+     width: auto;
+     background-image: url("images/compressed/bulb.jpg");
      background-size: cover;
 }
 
 .bioParallax { 
     /* The image used */
-    background-image: url("images/selfieBW.jpg");
+    background-image: url("images/compressed/selfieBW.jpg");
 
     /* Full height & width */
     height: 100%;
@@ -44,7 +45,7 @@ nav {
 
 .portfolioParallax { 
     /* The image used */
-    background-image: url("images/dino.jpg");
+    background-image: url("images/compressed/dino.jpg");
 
     /* Full height & width */
     height: 100%;
@@ -65,38 +66,45 @@ nav {
 	margin: 0px;
 }
 
-#bio {
-	background: linear-gradient(to bottom right, #3f6379, #9f6379);
-	height: auto;
-	text-align: center;
+.bio {
+    background: -webkit-linear-gradient(top left, #3f6379, #9f6379);
+    background: -o-linear-gradient(top left, #3f6379, #9f6379);
+    background: linear-gradient(to bottom right, #3f6379, #9f6379);
+}
+
+#bioWrap {
 	padding: 60px;
 	color: #cccccc;
 	font-size: 16px;
+    max-width: 1020px;
+    margin: auto;
 }
 
-#portfolioText {
-	background: linear-gradient(to bottom right, #9f6379, #ff6379);
-	height: auto;
-	text-align: center;
-	padding: 60px;
-	color: #f2f2f2;
-	font-size: 16px;
+.portfolio {
+    background: -webkit-linear-gradient(top left, #9f6379, #ff6379);
+    background: -o-linear-gradient(top left, #9f6379, #ff6379);
+    background: linear-gradient(to bottom right, #9f6379, #ff6379);
 }
 
-#portfolioChart {
-    background-color: black;
-    height: auto;
-    text-align: center;
+#portfolioWrap {
     padding: 60px;
     color: #f2f2f2;
     font-size: 16px;
+    max-width: 1020px;
+    margin: auto;
+
+}
+
+#portfolioChart {
+    background-color: #222222;
+    text-align: center;
+    color: #cccccc;
 }
 
 #chartWrap {
-    padding-top: 20px;
-    width: auto;
+    padding-top: 5px;
 }
 
-h1 span {
+ #mainHeader {
 	background: linear-gradient(to right, rgba(255,0,0,0), #9f6379);
 }

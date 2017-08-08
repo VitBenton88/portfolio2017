@@ -1,25 +1,36 @@
-$(document).ready(function() {
-
-
-	//----------------------------------------------------------------END OF SCRIPT	
-});
-
-
 $( window ).load(function() {
 
+// chart JS START --------------
 	var htmlData = 80;
 	var cssData = 70;
 	var bootsrapData = 40;
-	var jsData = 50;
-	var jqueryData = 70;
+	var jsData = 40;
+	var jqueryData = 50;
 	var ajaxData = 50;
 	var firebaseData = 30;
-	var ctx = $("#myChart");		
+
+	var barChartOrientation = 'bar'; 
+	var yAxisDisplay = false;
+	var xAxisDisplay = true;
+	var chartLabels = ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "AJAX", "Google Firebase"];
+	var ctx = $("#myChart");
+
+	if (window.matchMedia('(max-width: 768px)').matches){
+    	barChartOrientation = 'horizontalBar';
+    	var yAxisDisplay = true;
+		var xAxisDisplay = false;
+	}
+
+	else if (window.matchMedia('(min-width: 768px)').matches){
+		barChartOrientation = 'bar';
+		var yAxisDisplay = false;
+		var xAxisDisplay = true
+	};
 
 	var myChart = new Chart(ctx, {
-	    type: 'bar',
+	    type: barChartOrientation,
 	    data: {
-	        labels: ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "AJAX", "Google Firebase"],
+	        labels: chartLabels,
 	        datasets: [{
 	            data: [htmlData, cssData, bootsrapData, jsData, jqueryData, ajaxData, firebaseData],
 	            backgroundColor: [
@@ -40,24 +51,46 @@ $( window ).load(function() {
 	                'rgba(40, 171, 226, 1)',
 	                'rgba(245, 130, 12, 1)',
 	            ],
-	            borderWidth: 1
+	            borderWidth: 2
 	        }]
 	    },
 	    options: {
+	    	tooltips: {enabled: false},
+    		hover: {mode: null},
 	    	legend: {
         		display: false
     		},
 	        scales: {
 	            yAxes: [{
+	            	display: yAxisDisplay,
 	                ticks: {
 	                    beginAtZero:true
-	                }
-	            }]
+	                },
+	            }],
+	            xAxes: [{
+            		display: xAxisDisplay,
+            		ticks: {
+	                    beginAtZero:true
+	                },
+          		}],
 	        }
 	    }
 	});
+// chart JS END --------------
 
 
+// smoothScroll START --------------
 
-  //----------------------------------------------------------------END OF SCRIPT	
+	var $root = $('html, body'); 
+
+	$('a').click(function(){
+    $root.animate({
+        scrollTop: $( $(this).attr('href') ).offset().top
+    }, 500);
+    return false;
+});
+
+// smoothScroll END --------------
+
+  //----------------------------------------------------------------END OF .load SCRIPT	
 });
