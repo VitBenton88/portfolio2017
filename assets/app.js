@@ -92,5 +92,9 @@ $( window ).load(function() {
 
 // smoothScroll END --------------
 
+	$('.nav a').on('click', function(){//toggle mobile nav after selection
+    	$('.navbar-toggle').click();
+	});
+
   //----------------------------------------------------------------END OF .load SCRIPT	
 });
