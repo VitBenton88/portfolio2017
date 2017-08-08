@@ -1,6 +1,11 @@
 body {
 	font-family: 'Droid Sans', sans-serif;
     background-color: #222222;
+    line-height: 2;
+}
+
+.navbar {
+    opacity: 1;
 }
 
 .navbar .navbar-nav {
@@ -22,48 +27,44 @@ nav {
 }
 
 .header {
-     height:100vh;
+     height: 100vh;
      width: auto;
-     background-image: url("images/compressed/bulb.jpg");
+     background-image: url("images/compressed/bulb2.jpg");
      background-size: cover;
+}
+
+#headerText {
+    margin-top: 200px;
+    color: white;
+    font-weight: bolder;
+}
+
+.parallax h1 {
+    text-align: center;
+    color: white;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    margin: 0px;
 }
 
 .bioParallax { 
     /* The image used */
-    background-image: url("images/compressed/selfieBW.jpg");
+    background-image: url("images/compressed/selfieBW2.jpg");
 
     /* Full height & width */
     height: 100%;
     width: 100%;
 
-    /* Create the parallax scrolling effect */
+     /*Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.portfolioParallax { 
-    /* The image used */
-    background-image: url("images/compressed/dino.jpg");
 
-    /* Full height & width */
-    height: 100%;
-    width: 100%;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.parallax h1 {
-	text-align: center;
-	color: white;
-	padding-top: 200px;
-	padding-bottom: 200px;
-	margin: 0px;
+ #bioHeader, #portHeader {
+    background: linear-gradient(to right, rgba(255,0,0,0), #9f6379);
 }
 
 .bio {
@@ -78,6 +79,21 @@ nav {
 	font-size: 16px;
     max-width: 1020px;
     margin: auto;
+}
+
+.portfolioParallax { 
+    /* The image used */
+    background-image: url("images/compressed/dino2.jpg");
+
+    /* Full height & width */
+    height: 100%;
+    width: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .portfolio {
@@ -103,8 +119,4 @@ nav {
 
 #chartWrap {
     padding-top: 5px;
-}
-
- #mainHeader {
-	background: linear-gradient(to right, rgba(255,0,0,0), #9f6379);
 }
