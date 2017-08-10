@@ -1,7 +1,7 @@
 $( window ).load(function() {
 
 // chart JS START --------------
-	var htmlData = 80;
+	var htmlData = 70;
 	var cssData = 70;
 	var bootsrapData = 40;
 	var jsData = 40;
@@ -34,22 +34,22 @@ $( window ).load(function() {
 	        datasets: [{
 	            data: [htmlData, cssData, bootsrapData, jsData, jqueryData, ajaxData, firebaseData],
 	            backgroundColor: [
-	                'rgba(237, 95, 40, 0.4)',
-	                'rgba(40, 171, 226, 0.4)',
-	                'rgba(86, 61, 124, 0.4)',
-	                'rgba(247, 223, 30, 0.4)',
-	                'rgba(20, 43, 70, 0.4)',
-	                'rgba(255, 255, 255, 0.4)',
-	                'rgba(255, 203, 43, 0.4)',
+	                'rgba(207, 99, 121, 0.4)',
+	                'rgba(207, 99, 121, 0.4)',
+	                'rgba(207, 99, 121, 0.4)',
+	                'rgba(207, 99, 121, 0.4)',
+	                'rgba(207, 99, 121, 0.4)',
+	                'rgba(207, 99, 121, 0.4)',
+	                'rgba(207, 99, 121, 0.4)',
 	            ],
 	            borderColor: [
 	                'rgba(227,76,38,1)',
-	                'rgba(0, 113, 188, 1)',
-	                'rgba(255, 255, 255, 1)',
-	                'rgba(0, 0, 0, 1)',
-	                'rgba(255, 255, 255, 1)',
-	                'rgba(40, 171, 226, 1)',
-	                'rgba(245, 130, 12, 1)',
+	                'rgba(227,76,38,1)',
+	                'rgba(227,76,38,1)',
+	                'rgba(227,76,38,1)',
+	                'rgba(227,76,38,1)',
+	                'rgba(227,76,38,1)',
+	                'rgba(227,76,38,1)',
 	            ],
 	            borderWidth: 2
 	        }]
@@ -97,7 +97,7 @@ $( window ).load(function() {
 	var windowSize = $(window).width();
 
 	$('.nav a').on('click', function(){
-		if (windowSize <= 768){
+		if (windowSize < 769){//less than bootstrap's mobile breakpoint
     		$('.navbar-toggle').click();
 		}
 	});
