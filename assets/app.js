@@ -127,14 +127,6 @@ $( window ).load(function() {
 //--------------------------------
 	});
 
-// change active class when nav selection is made:
-    $('.nav a').click(function(){
-        $('.active').removeClass('active');
-        $(this).addClass('active');
-    });
-
- //--------------------------------
-
 
   //----------------------------------------------------------------END OF .load SCRIPT	
 });

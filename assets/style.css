@@ -2,6 +2,7 @@ body {
 	font-family: 'Droid Sans', sans-serif;
     background-color: #222222;
     line-height: 2;
+    position: relative;
 }
 
 .navbar .navbar-nav {
@@ -32,7 +33,15 @@ nav {
    border-bottom:2px solid white;
 }
 
-.header {
+.navbar-inverse .navbar-nav>.active>a {
+    background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
+        background-color: transparent;
+    }
+
+#header {
      height: 100vh;
      width: auto;
      background: linear-gradient(0deg,rgba(255,0,150,0.3),rgba(255,0,150,0.3)), url("images/compressed/bulb2.jpg");
@@ -56,7 +65,7 @@ nav {
     margin: 0px;
 }
 
-.bioParallax { 
+#bio { 
     /* The image used */
     background-image: url("images/compressed/selfieBW2.jpg");
 
@@ -76,7 +85,7 @@ nav {
     background: linear-gradient(to right, rgba(255,0,0,0), 207);
 }
 
-.bio {
+.bioSection {
     background: -webkit-linear-gradient(top left, #3f6379, #9f6379);
     background: -o-linear-gradient(top left, #3f6379, #9f6379);
     background: linear-gradient(to bottom right, #3f6379, #9f6379);
@@ -90,7 +99,7 @@ nav {
     margin: auto;
 }
 
-.portfolioParallax { 
+#portfolio { 
     /* The image used */
     background-image: url("images/compressed/dino2.jpg");
 
@@ -105,7 +114,7 @@ nav {
     background-size: cover;
 }
 
-.portfolio {
+.portfolioSection {
     background: -webkit-linear-gradient(top left, #9f6379, #ff6379);
     background: -o-linear-gradient(top left, #9f6379, #ff6379);
     background: linear-gradient(to bottom right, #9f6379, #ff6379);
