@@ -17,7 +17,7 @@ body {
 }
 
 .navbar-inverse {
-	background: none;
+	background: none; 
 	border: none;
 }
 
@@ -82,7 +82,7 @@ nav {
 
 
  #bioHeader, #portHeader {
-    background: linear-gradient(to right, rgba(255,0,0,0), 207);
+    background: linear-gradient(to right, rgba(255,0,0,0), #9f6379);
 }
 
 .bioSection {
