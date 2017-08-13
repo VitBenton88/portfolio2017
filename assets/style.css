@@ -41,6 +41,10 @@ nav {
         background-color: transparent;
     }
 
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
+    color: #9d9d9d;
+}
+
 #header {
      height: 100vh;
      width: auto;

@@ -90,9 +90,10 @@ $( window ).load(function() {
     return false;
 });
 
+
 // smoothScroll END --------------
 
-//hide nav bar after selection is made:
+//hide nav bar after selection is made (on mobile):
 	
 	var windowSize = $(window).width();
 
@@ -101,6 +102,7 @@ $( window ).load(function() {
     		$('.navbar-toggle').click();
 		}
 	});
+
 
 //--------------------------------
 
@@ -126,7 +128,6 @@ $( window ).load(function() {
 		}
 //--------------------------------
 	});
-
 
   //----------------------------------------------------------------END OF .load SCRIPT	
 });
