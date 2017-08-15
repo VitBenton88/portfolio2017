@@ -98,7 +98,7 @@ $( window ).load(function() {
 	var windowSize = $(window).width();
 
 	$('.nav a').on('click', function(){
-		if (windowSize < 769){//less than bootstrap's mobile breakpoint
+		if (windowSize < 480){//less than bootstrap's mobile breakpoint
     		$('.navbar-toggle').click();
 		}
 	});
