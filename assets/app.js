@@ -79,55 +79,6 @@ $( window ).load(function() {
 // chart JS END --------------
 
 
-// smoothScroll START --------------
-
-	var $root = $('html, body'); 
-
-	$('a').click(function(){
-    $root.animate({
-        scrollTop: $( $(this).attr('href') ).offset().top
-    }, 500);
-    return false;
-});
-
-
-// smoothScroll END --------------
-
-//hide nav bar after selection is made (on mobile):
-	
-	var windowSize = $(window).width();
-
-	$('.nav a').on('click', function(){
-		if (windowSize < 480){//less than bootstrap's mobile breakpoint
-    		$('.navbar-toggle').click();
-		}
-	});
-
-
-//--------------------------------
-
-// nav color change on navButton click on mobile:
-
-	var navButton = $('#mobileNavButton');
-	var navLink = $('.navlink');
-	var navBar = $('.navbar-toggle, .navbar-collapse, .navbar, .collapse');
-
-	navButton.click(function(){
-
-		if (navButton.hasClass('collapsed')){
-
-			navBar.css('background-color','#222');
-			navBar.css('border-color','#080808');
-		}
-
-		else {
-
-			navBar.css('background-color','transparent');
-			navBar.css('border-color','white');
-
-		}
-//--------------------------------
-	});
 
   //----------------------------------------------------------------END OF .load SCRIPT	
 });

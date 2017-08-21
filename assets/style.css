@@ -33,16 +33,16 @@ nav {
    border-bottom:2px solid white;
 }
 
-.navbar-inverse .navbar-nav>.active>a {
-    background-color: transparent;
-}
-
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
         background-color: transparent;
     }
 
 .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
     color: #9d9d9d;
+}
+
+.opaqueNav {
+    background-color: #222222;
 }
 
 #header {
