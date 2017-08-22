@@ -111,5 +111,35 @@ $(document).ready(function() {
 
 	//--------------------------------
 
+	//on mobile, remove parallax, insert mobile styling
+
+	var bioSection = $('#bio');
+	var portSection = $('#portfolio');
+	var bioHeader = $('#bioHeader');
+	var portHeader = $('#portHeader');
+	var selfie = $('#faceShot');
+	var portParallax = $('#portParallax');
+
+	if (windowWidth < 480){//less than bootstrap's mobile breakpoint
+    		bioSection.removeClass('bioParallax');
+    		bioSection.addClass('mobileHeaders');
+
+
+    		bioHeader.css('background','#222222');
+    		bioHeader.css('padding-top','10px');
+    		bioHeader.css('padding-bottom','0px');
+
+    		portHeader.css('padding-top','120px');
+    		portHeader.css('padding-bottom','120px');
+    		portHeader.css('height','auto');
+    		portHeader.css('width','auto');
+
+    		portParallax.css('background-attachment','initial');
+
+    		selfie.css('display','block');
+		}
+
+	//--------------------------------
+
 //----------------------------------------------------------------END OF SCRIPT	
 });
