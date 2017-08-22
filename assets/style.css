@@ -5,6 +5,29 @@ body {
     position: relative;
 }
 
+#loaderWrap {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #222222;
+}
+
+.loader {
+    border: 16px solid #222222; 
+    border-top: 16px solid #9f6379; 
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    animation: spin 2s linear infinite;
+    margin: 100px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 .navbar .navbar-nav {
     display: inline-block;
     float: none;
@@ -170,6 +193,5 @@ nav {
     }
 
 }
-
 
 

@@ -1,3 +1,8 @@
+$(window).load(function() {
+	$("#loaderWrap").fadeOut("slow");
+})
+
+
 $(document).ready(function() {
 
 	var windowWidth = $(window).width();
@@ -92,13 +97,13 @@ $(document).ready(function() {
 
   		if (userScrolled) {
 
-			if (!homeLI.hasClass('active') && windowWidth > 768){
+			if (!homeLI.hasClass('active') && windowWidth > 767){//ipad mini and up
 
 				$('.navbar-inverse').addClass('opaqueNav', 150);
 
 			}
 
-			else if (homeLI.hasClass('active') && windowWidth > 768){
+			else if (homeLI.hasClass('active') && windowWidth > 767){//ipad mini and up
 
 				$('.navbar-inverse').removeClass('opaqueNav', 150);
 			};
@@ -121,17 +126,19 @@ $(document).ready(function() {
 	var selfie = $('#faceShot');
 	var portParallax = $('.portParallax');
 
-	if (windowWidth < 737){//less than bootstrap's mobile breakpoint
+	if (windowWidth < 769){//less than bootstrap's mobile breakpoint
     		bioSection.removeClass('bioParallax');
     		bioSection.addClass('mobileHeaders');
-
+    		portSection.removeClass('portParallax');
+    		portSection.addClass('mobileHeaders');
 
     		bioHeader.css('background','#222222');
-    		bioHeader.css('padding-top','10px');
+    		bioHeader.css('padding-top','55px');
     		bioHeader.css('padding-bottom','0px');
 
-    		portHeader.css('padding-top','120px');
-    		portHeader.css('padding-bottom','120px');
+    		portHeader.css('background','#222222');
+    		portHeader.css('padding-top','55px');
+    		portHeader.css('padding-bottom','55px');
 
     		portParallax.css('background-attachment','initial');
     		portParallax.css('background-size','200%');
