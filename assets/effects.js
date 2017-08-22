@@ -137,8 +137,8 @@ $(document).ready(function() {
     		bioHeader.css('padding-bottom','0px');
 
     		portHeader.css('background','#222222');
-    		portHeader.css('padding-top','55px');
-    		portHeader.css('padding-bottom','55px');
+    		portHeader.css('padding-top','70px');
+    		portHeader.css('padding-bottom','50px');
 
     		portParallax.css('background-attachment','initial');
     		portParallax.css('background-size','200%');
