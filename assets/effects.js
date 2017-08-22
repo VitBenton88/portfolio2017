@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+	var windowWidth = $(window).width();
+	var windowHeight = $(window).height();
+
 	// smoothScroll START --------------
 
 	var $root = $('html, body'); 
@@ -12,14 +15,12 @@ $(document).ready(function() {
 	});
 
 
-// smoothScroll END --------------
+//--------------------------------
 
 //hide nav bar after selection is made (on smaller screens):
-	
-	var windowWidth = $(window).width();
 
 	$('.nav a').on('click', function(){
-		if (windowWidth < 480){//less than bootstrap's mobile breakpoint
+		if (windowWidth < 737){//less than bootstrap's mobile breakpoint
     		$('.navbar-toggle').click();
 		}
 	});
@@ -118,9 +119,9 @@ $(document).ready(function() {
 	var bioHeader = $('#bioHeader');
 	var portHeader = $('#portHeader');
 	var selfie = $('#faceShot');
-	var portParallax = $('#portParallax');
+	var portParallax = $('.portParallax');
 
-	if (windowWidth < 480){//less than bootstrap's mobile breakpoint
+	if (windowWidth < 737){//less than bootstrap's mobile breakpoint
     		bioSection.removeClass('bioParallax');
     		bioSection.addClass('mobileHeaders');
 
@@ -131,10 +132,9 @@ $(document).ready(function() {
 
     		portHeader.css('padding-top','120px');
     		portHeader.css('padding-bottom','120px');
-    		portHeader.css('height','auto');
-    		portHeader.css('width','auto');
 
     		portParallax.css('background-attachment','initial');
+    		portParallax.css('background-size','200%');
 
     		selfie.css('display','block');
 		}
