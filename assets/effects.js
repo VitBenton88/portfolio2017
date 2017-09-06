@@ -127,7 +127,7 @@ $(document).ready(function() {
 	var selfie = $('#faceShot');
 	var portParallax = $('.portParallax');
 
-	if (windowWidth < 769){//less than bootstrap's mobile breakpoint
+	if (windowWidth < 1025){//less than bootstrap's mobile breakpoint
     		bioSection.removeClass('bioParallax');
     		bioSection.addClass('mobileHeaders');
     		portSection.removeClass('portParallax');

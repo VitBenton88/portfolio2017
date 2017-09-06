@@ -181,17 +181,43 @@ nav {
 }
 
 /*MEDIA QUERIES*/
+/*!!IMPORTANT some responsize layout done in effects.js*/
 
+@media (max-width: 599px) {/*phone only*/
 
-@media (max-width: 768px) {
-
-    .navbar-inverse .navbar-toggle {
+.navbar-inverse .navbar-toggle {
         border-color: white;
     }
 
     .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
         background-color: transparent;
     }
+
+    .navbar .navbar-collapse {
+        font-size: 24px;
+    }
+
+    .navbar-nav>li {
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (min-width: 600px) {/*tablet-portrait & up*/
+    
+    .navbar-nav>li {
+        margin-bottom: -5px;
+    }
+
+}
+
+@media (min-width: 900px) {/*tablet-landscape & up*/
+    
+
+}
+
+@media (min-width: 1200) {/*desktop & up*/
+    
 
 }
 
