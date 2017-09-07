@@ -6,14 +6,43 @@ $( window ).load(function() {
 	var bootsrapData = 40;
 	var jsData = 40;
 	var jqueryData = 50;
+	var respDes = 40;
 	var ajaxData = 50;
 	var firebaseData = 30;
+	var mySQLdata = 30; 
+	var nodeData = 40;
+	var expressData = 30;
+	var photoshopData = 70;
 
 	var barChartOrientation = 'bar'; 
 	var yAxisDisplay = false;
 	var xAxisDisplay = true;
-	var chartLabels = ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "AJAX", "Google Firebase"];
-	var ctx = $("#myChart");
+	var frontendLabels = ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "Abode Photoshop", "Responsive Design"];
+	var backendLabels = ["AJAX", "Express", "Google Firebase", "mySQL", "Node.js"];
+	var ctxFrontend = $("#frontendCanvas");
+	var ctxBackend = $("#backendCanvas");
+	var chartOptions = {
+		    	tooltips: {enabled: false},
+	    		hover: {mode: null},
+		    	legend: {
+	        		display: false
+	    		},
+		        scales: {
+		            yAxes: [{
+		            	display: yAxisDisplay,
+		                ticks: {
+		                    beginAtZero:true
+		                },
+		            }],
+		            xAxes: [{
+	            		display: xAxisDisplay,
+	            		ticks: {
+		                    beginAtZero:true,
+		                    fontSize: 16
+		                },
+	          		}],
+		        }
+		    }
 
 	if (window.matchMedia('(max-width: 768px)').matches){
     	barChartOrientation = 'horizontalBar';
@@ -27,13 +56,13 @@ $( window ).load(function() {
 		var xAxisDisplay = true
 	};
 
-	var myChart = function(){//created inside function to be able to called at scroll later
-		new Chart(ctx, {
+	var myFrontendChart = function(){//created inside function to be able to called at scroll later
+		new Chart(ctxFrontend, {
 		    type: barChartOrientation,
 		    data: {
-		        labels: chartLabels,
+		        labels: frontendLabels,
 		        datasets: [{
-		            data: [htmlData, cssData, bootsrapData, jsData, jqueryData, ajaxData, firebaseData],
+		            data: [htmlData, cssData, bootsrapData, jsData, jqueryData, photoshopData, respDes],
 		            backgroundColor: [
 		                'rgba(207, 99, 121, 0.4)',
 		                'rgba(207, 99, 121, 0.4)',
@@ -55,33 +84,46 @@ $( window ).load(function() {
 		            borderWidth: 2
 		        }]
 		    },
-		    options: {
-		    	tooltips: {enabled: false},
-	    		hover: {mode: null},
-		    	legend: {
-	        		display: false
-	    		},
-		        scales: {
-		            yAxes: [{
-		            	display: yAxisDisplay,
-		                ticks: {
-		                    beginAtZero:true
-		                },
-		            }],
-		            xAxes: [{
-	            		display: xAxisDisplay,
-	            		ticks: {
-		                    beginAtZero:true
-		                },
-	          		}],
-		        }
-		    }
+		    options: chartOptions
+		});
+	};
+
+	var myBackendChart = function(){//created inside function to be able to called at scroll later
+		new Chart(ctxBackend, {
+		    type: barChartOrientation,
+		    data: {
+		        labels: backendLabels,
+		        datasets: [{
+		            data: [ajaxData, expressData, firebaseData, mySQLdata, nodeData],
+		            backgroundColor: [
+		                'rgba(34, 34, 34, 0.8)',
+		                'rgba(34, 34, 34, 0.8)',
+		                'rgba(34, 34, 34, 0.8)',
+		                'rgba(34, 34, 34, 0.8)',
+		                'rgba(34, 34, 34, 0.8)',
+		                'rgba(34, 34, 34, 0.8)',
+		                'rgba(34, 34, 34, 0.8)',
+		            ],
+		            borderColor: [
+		                'rgba(0,0,0,1)',
+		                'rgba(0,0,0,1)',
+		                'rgba(0,0,0,1)',
+		                'rgba(0,0,0,1)',
+		                'rgba(0,0,0,1)',
+		                'rgba(0,0,0,1)',
+		                'rgba(0,0,0,1)',
+		            ],
+		            borderWidth: 2
+		        }]
+		    },
+		    options: chartOptions
 		});
 	};
 
 	//code for loading graph at scroll
 
-	var inView = false;
+	var backendInView = false;
+	var frontendInView = false;
 
 	function isScrolledIntoView(elem)
 	{
@@ -95,20 +137,26 @@ $( window ).load(function() {
 	}
 
 	$(window).scroll(function() {
-	    if (isScrolledIntoView($('canvas'))) {
-	        if (inView) { return; }
-	        inView = true;
-	        myChart();
+	    if (isScrolledIntoView($('#frontendCanvas'))) {
+	        if (frontendInView) { return; }
+	        frontendInView = true;
+	        myFrontendChart();
 	    } else {
-	        inView = false;  
+	        frontendInView = false;  
+	    }
+	});
+
+	$(window).scroll(function() {
+	    if (isScrolledIntoView($('#backendCanvas'))) {
+	        if (backendInView) { return; }
+	        backendInView = true;
+	        myBackendChart();
+	    } else {
+	        backendInView = false;  
 	    }
 	});
 
 	//--------------------------------END OF code for loading graph at scroll
-
-// chart JS END --------------
-
-
 
   //----------------------------------------------------------------END OF .load SCRIPT	
 });

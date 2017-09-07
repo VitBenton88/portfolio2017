@@ -170,14 +170,32 @@ nav {
 
 }
 
-#portfolioChart {
+#myCarousel{
+    width: 33%;
+    margin: auto;
+}
+
+.carousel-control.left, .carousel-control.right {
+    background: none;
+}
+
+#frontendChart {
     background-color: #222222;
     text-align: center;
     color: #cccccc;
 }
 
+#backendChart {
+    text-align: center;
+    color: #222222;
+}
+
 #chartWrap {
     padding-top: 5px;
+}
+
+.backend{
+    background-color: #ff6379;
 }
 
 /*MEDIA QUERIES*/

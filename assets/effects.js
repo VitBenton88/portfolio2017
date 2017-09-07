@@ -13,7 +13,7 @@ $(document).ready(function() {
 
 	var $root = $('html, body'); 
 
-	$('a').click(function(){
+	$('.navLink').click(function(){
 	    $root.animate({
 	        scrollTop: $( $(this).attr('href') ).offset().top
 	    }, 500);
