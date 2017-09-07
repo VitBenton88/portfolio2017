@@ -6,7 +6,7 @@ $( window ).load(function() {
 	var bootsrapData = 40;
 	var jsData = 40;
 	var jqueryData = 50;
-	var respDes = 40;
+	var respDes = 50;
 	var ajaxData = 50;
 	var firebaseData = 30;
 	var mySQLdata = 30; 
@@ -15,8 +15,6 @@ $( window ).load(function() {
 	var photoshopData = 70;
 
 	var barChartOrientation = 'bar'; 
-	var yAxisDisplay = false;
-	var xAxisDisplay = true;
 	var frontendLabels = ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "Abode Photoshop", "Responsive Design"];
 	var backendLabels = ["AJAX", "Express", "Google Firebase", "mySQL", "Node.js"];
 	var ctxFrontend = $("#frontendCanvas");
@@ -29,32 +27,28 @@ $( window ).load(function() {
 	    		},
 		        scales: {
 		            yAxes: [{
-		            	display: yAxisDisplay,
+		            	display: false,
 		                ticks: {
-		                    beginAtZero:true
+		                    beginAtZero:true,
+		                    fontSize: 12
 		                },
 		            }],
 		            xAxes: [{
-	            		display: xAxisDisplay,
+	            		display: true,
 	            		ticks: {
 		                    beginAtZero:true,
 		                    fontSize: 16
 		                },
 	          		}],
 		        }
-		    }
+		    };
 
-	if (window.matchMedia('(max-width: 768px)').matches){
+	if (window.matchMedia('(max-width: 599px)').matches){//mobile chart
     	barChartOrientation = 'horizontalBar';
-    	var yAxisDisplay = true;
-		var xAxisDisplay = false;
-	}
-
-	else if (window.matchMedia('(min-width: 768px)').matches){
-		barChartOrientation = 'bar';
-		var yAxisDisplay = false;
-		var xAxisDisplay = true
+    	chartOptions.scales.yAxes[0].display = true;
+		chartOptions.scales.xAxes[0].display = false;
 	};
+
 
 	var myFrontendChart = function(){//created inside function to be able to called at scroll later
 		new Chart(ctxFrontend, {
