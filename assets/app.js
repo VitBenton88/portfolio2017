@@ -130,7 +130,7 @@ $( window ).load(function() {
 	    return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
 	}
 
-	$(window).scroll(function() {
+	$(window).scroll(function() {//load chart when section is in viewport 
 	    if (isScrolledIntoView($('#frontendCanvas'))) {
 	        if (frontendInView) { return; }
 	        frontendInView = true;
@@ -140,7 +140,7 @@ $( window ).load(function() {
 	    }
 	});
 
-	$(window).scroll(function() {
+	$(window).scroll(function() {//load chart when section is in viewport 
 	    if (isScrolledIntoView($('#backendCanvas'))) {
 	        if (backendInView) { return; }
 	        backendInView = true;

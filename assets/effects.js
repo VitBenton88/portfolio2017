@@ -149,5 +149,35 @@ $(document).ready(function() {
 
 	//--------------------------------
 
+	//change color of mobile nav button when resume is in viewport
+
+	var InView = false;
+
+	function isScrolledIntoView(elem)
+	{
+	    var docViewTop = $(window).scrollTop();
+	    var docViewBottom = docViewTop + $(window).height();
+
+	    var elemTop = $(elem).offset().top;
+	    var elemBottom = elemTop + $(elem).height();
+
+	    return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
+	}
+
+	$(window).scroll(function() {//cgange color of mobile nav button when resume is in viewport 
+	    if (isScrolledIntoView($('#navBlackToggle'))) {
+	        if (InView) { return; }
+	        InView = true;
+	        $('.navbar-inverse .navbar-toggle').css('border-color','black');
+	        $('.icon-bar').css('background-color','black');
+	    } else {
+	    	$('.navbar-inverse .navbar-toggle').css('border-color','white');
+	        $('.icon-bar').css('background-color','white');
+	        InView = false;  
+	    }
+	});
+
+	//--------------------------------
+
 //----------------------------------------------------------------END OF SCRIPT	
 });
