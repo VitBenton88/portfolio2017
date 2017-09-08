@@ -203,7 +203,7 @@ nav {
     color: #222222;
 }
 
-.resume {
+#resume {
     background-color: white;
 }
 
@@ -231,6 +231,20 @@ nav {
 .subHeader {
     font-weight: 900;
     text-shadow: 1px 0px black;
+}
+
+#contact {
+    background: -webkit-linear-gradient(top left, #9f6379, #3f6379);
+    background: -o-linear-gradient(top left, #9f6379, #3f6379);
+    background: linear-gradient(to bottom right, #9f6379, #3f6379);
+}
+
+#contactHeader {
+
+    font-family: 'Cabin', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: white;
 }
 
 /*MEDIA QUERIES*/
