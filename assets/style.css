@@ -58,8 +58,8 @@ nav {
 }
 
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
-        background-color: transparent;
-    }
+    background-color: transparent;
+}
 
 .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
     color: #9d9d9d;
@@ -198,6 +198,41 @@ nav {
     background-color: #ff6379;
 }
 
+#resumeTitle {
+    text-align: center;
+    color: #222222;
+}
+
+.resume {
+    background-color: white;
+}
+
+#resumeBody {
+    padding-top: 50px;
+    font-size: 16px;
+    text-align: left;
+}
+
+#resumeBody>h4 {
+    font-weight: bold;
+    font-family: 'Cabin', sans-serif;
+    color: #9f6379;
+}
+
+.resumeDate{
+    float: right;
+    color: #A0A0A0;
+}
+
+.resumeTitle {
+    color: #A0A0A0;
+}
+
+.subHeader {
+    font-weight: 900;
+    text-shadow: 1px 0px black;
+}
+
 /*MEDIA QUERIES*/
 /*!!IMPORTANT some responsize layout done in effects.js*/
 
@@ -218,6 +253,11 @@ nav {
     .navbar-nav>li {
         margin-bottom: 20px;
     }
+
+    #resumeBody {
+    font-size: 13px;
+    padding-top: 0px;
+}
 
 }
 
