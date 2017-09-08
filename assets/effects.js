@@ -26,7 +26,7 @@ $(document).ready(function() {
 //hide nav bar after selection is made (on smaller screens):
 
 	$('.nav a').on('click', function(){
-		if (windowWidth < 737){//less than bootstrap's mobile breakpoint
+		if (windowWidth < 599){//less than mobile breakpoint
     		$('.navbar-toggle').click();
 		}
 	});
@@ -151,10 +151,10 @@ $(document).ready(function() {
 
 	//change color of mobile nav button when resume is in viewport
 
-	var distance = $('#resume').offset().top,
+	var distance = $('#resume').offset().top;
     $window = $(window);
 
-	$window.scroll(function() {
+	$(window).scroll(function() {
 	    if ( $window.scrollTop() >= distance ) {
 	       $('.navbar-inverse .navbar-toggle').css('border-color','black');
 	       $('.icon-bar').css('background-color','black');
