@@ -252,8 +252,12 @@ nav {
 
 @media (max-width: 599px) {/*phone only*/
 
-.navbar-inverse .navbar-toggle {
-        border-color: white;
+    .navbar-inverse .navbar-toggle {
+        border-color: #d8d8d8;
+    }
+
+    .navbar-inverse .navbar-toggle .icon-bar {
+        background-color: #d8d8d8;
     }
 
     .navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {

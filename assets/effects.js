@@ -52,7 +52,7 @@ $(document).ready(function() {
 		else {
 
 			navBarAll.css('background-color','transparent');
-			navBarAll.css('border-color','white');
+			navBarAll.css('border-color','#d8d8d8');
 
 		};
 
@@ -149,22 +149,6 @@ $(document).ready(function() {
 
 	//--------------------------------
 
-	//change color of mobile nav button when resume is in viewport
-
-	var distance = $('#resume').offset().top;
-    $window = $(window);
-
-	$(window).scroll(function() {
-	    if ( $window.scrollTop() >= distance ) {
-	       $('.navbar-inverse .navbar-toggle').css('border-color','black');
-	       $('.icon-bar').css('background-color','black');
-	    } else{
-	    	$('.navbar-inverse .navbar-toggle').css('border-color','white');
-	        $('.icon-bar').css('background-color','white');
-	    }
-	})
-
-	//--------------------------------
 
 //----------------------------------------------------------------END OF SCRIPT	
 });
