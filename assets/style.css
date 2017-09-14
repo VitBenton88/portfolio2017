@@ -246,6 +246,23 @@ h4 {
     color: white;
 }
 
+#messageStart {
+    display: block;
+    margin: 30px auto;
+}
+
+#social-links {
+    margin: 20px auto;
+    display: block;
+    width: 300px;
+    text-align: center;
+}
+
+i {
+    display: inline;
+    margin-left: 0.2em;
+}
+
 /*MEDIA QUERIES*/
 /*!!IMPORTANT some responsize layout done in effects.js*/
 
