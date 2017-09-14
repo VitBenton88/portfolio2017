@@ -300,11 +300,11 @@ h4 {
     }
 
     .navbar .navbar-collapse {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .navbar-nav>li {
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     #resume {
