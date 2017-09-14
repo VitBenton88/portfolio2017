@@ -20,13 +20,12 @@ $(document).ready(function() {
 	    return false;
 	});
 
-
 //--------------------------------
 
 //hide nav bar after selection is made (on smaller screens):
 
 	$('.nav a').on('click', function(){
-		if (windowWidth < 599){//less than mobile breakpoint
+		if (windowWidth < 599 || windowWidth < 750){//less than mobile breakpoint, landscape & portrait
     		$('.navbar-toggle').click();
 		}
 	});
