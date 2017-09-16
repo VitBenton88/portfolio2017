@@ -152,14 +152,14 @@ $(document).ready(function() {
 
 	var messageBTN = $('#messageStart');
 	var sendBTN = $('#messageSend');
-	var messageBTNstate = true;
-	var sendBTNstate = true;
+	var socialIcon = $('.fa');
+	var BTNstate = true;
 
 		// Animate on hover
 
 		//message start button
     $( messageBTN ).hover(function() {
-      if ( messageBTNstate ) {
+      if ( BTNstate ) {
         $( this ).animate({
           backgroundColor: "white",
           color: "#9f6379",
@@ -173,11 +173,11 @@ $(document).ready(function() {
           width: 240
         }, 300 );
       }
-      messageBTNstate = !messageBTNstate;
+      BTNstate = !BTNstate;
     });
 		//send button
     $( sendBTN ).hover(function() {
-      if ( sendBTNstate ) {
+      if ( BTNstate ) {
         $( this ).animate({
           backgroundColor: "white",
           color: "#9f6379",
@@ -191,7 +191,7 @@ $(document).ready(function() {
           width: 200
         }, 300 );
       }
-      sendBTNstate = !sendBTNstate;
+      BTNstate = !BTNstate;
     });
 
     	// Animate on click
@@ -211,6 +211,22 @@ $(document).ready(function() {
           color: "white"
         }, 300 );
  
+    });
+
+    //social links
+
+    $( socialIcon ).hover(function() {
+      if ( BTNstate ) {
+        $( this ).animate({
+          color: "#222222",
+
+        }, 200 );
+      } else {
+        $( this ).animate({
+          color: "white",
+        }, 300 );
+      }
+      BTNstate = !BTNstate;
     });
  
 
