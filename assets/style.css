@@ -247,21 +247,99 @@ h4 {
 }
 
 #messageStart {
+    color: white;
+    border-color: white;
+    border-radius: 8px;
+    background: none;
+    margin: 40px auto;
     display: block;
-    margin: 30px auto;
+    width: 250px;
+    height: 80px;
+    font-size: 24px;
+}
+
+#messageStart:focus {
+    outline: none;
+}
+
+#messageSend {
+    color: white;
+    border-color: white;
+    border-radius: 8px;
+    background: none;
+    margin: 40px auto;
+    display: block;
+    width: 200px;
+    height: 60px;
+    font-size: 24px;
+}
+
+#messageSend:focus {
+    outline: none;
 }
 
 #social-links {
-    margin: 20px auto;
+    margin: 10px auto;
     display: block;
     width: 300px;
     text-align: center;
 }
 
-i {
+.fa {
     display: inline;
     margin-left: 0.2em;
+    color: white;
 }
+
+
+.modal-backdrop {
+    /* bug fix - no overlay */    
+    display: none; 
+}
+
+#myModal {
+    background: -webkit-linear-gradient(top left, #9f6379, #3f6379);
+    background: -o-linear-gradient(top left, #9f6379, #3f6379);
+    background: linear-gradient(to bottom right, #9f6379, #3f6379);
+}
+
+.modal-title {
+    font-size: 32px;
+    color: #cf6379;
+}
+
+.close {
+  float: right;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1;
+  color: white;
+  text-shadow: 0 1px 0 #fff;
+  filter: alpha(opacity=20);
+  opacity: .6;
+}
+
+.modal-content {
+    background-color: #2c4554;
+    text-align: center;
+    color: white;
+}
+
+.modal-header {
+    padding: 15px;
+    border-bottom: 0px solid #e5e5e5;
+}
+
+form {
+    width: 50%;
+    margin: auto;
+}
+
+#message {
+    padding: 20px 10px 200px; 
+    line-height: 28px;
+}
+
 
 /*MEDIA QUERIES*/
 /*!!IMPORTANT some responsize layout done in effects.js*/
@@ -294,6 +372,10 @@ i {
 
     .fixedHeightRow {
         min-height: 260px;
+    }
+
+    form {
+        width: 100%;
     }
 
 }
@@ -354,6 +436,10 @@ i {
 
     .fixedHeightRow {
         min-height: 526px;
+    }
+
+    form {
+        width: 100%;
     }
 
 }

@@ -148,6 +148,74 @@ $(document).ready(function() {
 
 	//--------------------------------
 
+		//message button effects
+
+	var messageBTN = $('#messageStart');
+	var sendBTN = $('#messageSend');
+	var messageBTNstate = true;
+	var sendBTNstate = true;
+
+		// Animate on hover
+
+		//message start button
+    $( messageBTN ).hover(function() {
+      if ( messageBTNstate ) {
+        $( this ).animate({
+          backgroundColor: "white",
+          color: "#9f6379",
+          width: 300
+
+        }, 200 );
+      } else {
+        $( this ).animate({
+          backgroundColor: "transparent",
+          color: "white",
+          width: 240
+        }, 300 );
+      }
+      messageBTNstate = !messageBTNstate;
+    });
+		//send button
+    $( sendBTN ).hover(function() {
+      if ( sendBTNstate ) {
+        $( this ).animate({
+          backgroundColor: "white",
+          color: "#9f6379",
+          width: 240
+
+        }, 200 );
+      } else {
+        $( this ).animate({
+          backgroundColor: "transparent",
+          color: "white",
+          width: 200
+        }, 300 );
+      }
+      sendBTNstate = !sendBTNstate;
+    });
+
+    	// Animate on click
+
+    	//message start button
+    $( messageBTN ).click(function() {
+      
+        $( this ).animate({
+          color: "white"
+        }, 300 );
+ 
+    });
+    	//send button
+    $( sendBTN ).click(function() {
+      
+        $( this ).animate({
+          color: "white"
+        }, 300 );
+ 
+    });
+ 
+
+	//--------------------------------
+
 
 //----------------------------------------------------------------END OF SCRIPT	
 });
