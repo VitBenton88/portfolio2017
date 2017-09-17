@@ -54,7 +54,7 @@ nav {
 }
 
 .active {
-   border-bottom:2px solid white;
+   border-bottom: 2px solid white;
 }
 
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus, .navbar-inverse .navbar-nav>.active>a:hover {
@@ -74,14 +74,31 @@ nav {
      width: auto;
      background: linear-gradient(0deg,rgba(255,0,150,0.3),rgba(255,0,150,0.3)), url("images/compressed/bulb2.jpg");
      background-size: cover;
+     color: white;
 }
 
-#headerText {
+#header h1 {
 
     font-family: 'Cabin', sans-serif;
     font-weight: bold;
     text-align: center;
     margin-top: 100px;
+}
+
+#headerText {
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 300px;
+}
+
+#learnMore {
+    text-align: center;
+    max-width: 300px;
+    margin: auto;
+}
+
+#learnMore a {
+    text-decoration: none;
     color: white;
 }
 
@@ -236,6 +253,9 @@ h4 {
     background: -webkit-linear-gradient(top left, #9f6379, #3f6379);
     background: -o-linear-gradient(top left, #9f6379, #3f6379);
     background: linear-gradient(to bottom right, #9f6379, #3f6379);
+    padding: 50px 0px 50px 0px;
+    color: white;
+    text-align: center;
 }
 
 #contactHeader {
@@ -243,11 +263,14 @@ h4 {
     font-family: 'Cabin', sans-serif;
     font-weight: bold;
     text-align: center;
-    color: white;
+    margin-bottom: 40px;
+}
+
+#contactIntro {
+    font-size: 18px;
 }
 
 #messageStart {
-    color: white;
     border-color: white;
     border-radius: 8px;
     background: none;
@@ -263,7 +286,6 @@ h4 {
 }
 
 #messageSend {
-    color: white;
     border-color: white;
     border-radius: 8px;
     background: none;
@@ -285,7 +307,7 @@ h4 {
     text-align: center;
 }
 
-.fa {
+.socialIcons {
     display: inline;
     margin-left: 0.2em;
     color: white;
@@ -346,6 +368,16 @@ footer {
     height: 80px;
     color: white;
     border-top: 1px solid white;
+    text-align: center;
+    font-size: 18px;
+    color: #9d9d9d;
+    padding: 30px 0px 90px 0px;
+}
+
+footer .fa {
+
+    display: block;
+    color: #ff6379;
 }
 
 

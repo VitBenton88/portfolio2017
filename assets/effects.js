@@ -152,10 +152,26 @@ $(document).ready(function() {
 
 	var messageBTN = $('#messageStart');
 	var sendBTN = $('#messageSend');
-	var socialIcon = $('.fa');
+	var socialIcon = $('.socialIcons');
+	var headerLinks = $('.headerLinks')
 	var BTNstate = true;
 
 		// Animate on hover
+
+		//header links AKA 'learn more'
+		$( headerLinks ).hover(function() {
+	  if ( BTNstate ) {
+	    $( this ).animate({
+	      color: "#9f6379"
+
+	    }, 200 );
+	  } else {
+	    $( this ).animate({
+	      color: "white"
+	    }, 300 );
+	  }
+	  BTNstate = !BTNstate;
+	});
 
 		//message start button
     $( messageBTN ).hover(function() {
