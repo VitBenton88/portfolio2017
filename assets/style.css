@@ -79,6 +79,7 @@ nav {
      background: linear-gradient(0deg,rgba(255,0,150,0.3),rgba(255,0,150,0.3)), url("images/compressed/bulb2.jpg");
      background-size: cover;
      color: white;
+     padding-bottom: 20px;
 }
 
 #header h1 {
@@ -92,7 +93,7 @@ nav {
 #headerText {
     text-align: center;
     font-size: 18px;
-    margin-bottom: 300px;
+    margin-bottom: 250px;
 }
 
 #learnMore {
@@ -215,6 +216,35 @@ nav {
     width: 100%;
     height: auto;
     
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #3f6379;
+  border-radius: 15px;
+}
+
+.portfolioIcons:hover .overlay {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.techIcons {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
 }
 
 /* CHARTS */
