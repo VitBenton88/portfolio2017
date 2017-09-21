@@ -79,7 +79,7 @@ nav {
      background: linear-gradient(0deg,rgba(255,0,150,0.3),rgba(255,0,150,0.3)), url("images/compressed/bulb2.jpg");
      background-size: cover;
      color: white;
-     padding-bottom: 20px;
+     padding-bottom: 64px;
 }
 
 #header h1 {
