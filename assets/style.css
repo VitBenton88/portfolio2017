@@ -92,7 +92,7 @@ nav {
 #headerText {
     text-align: center;
     font-size: 18px;
-    margin-bottom: 206px;
+    margin-bottom: 500px;
 }
 
 #learnMore {
@@ -372,7 +372,7 @@ nav {
     color: white;
 }
 
-/* MODAL */
+/* CONTACT MODAL */
 
 
 .modal-backdrop {
@@ -469,6 +469,10 @@ footer .fa {
         margin-bottom: 20px;
     }
 
+    #headerText {
+        margin-bottom: 206px;
+    }
+
     .portfolioIcons {
     margin-bottom: 0px;
     }
@@ -511,6 +515,10 @@ footer .fa {
 
     .navbar-nav>li {
         margin-bottom: 15px;
+    }
+
+    #headerText {
+        margin-bottom: 70px;
     }
 
     #resume {
@@ -579,6 +587,10 @@ footer .fa {
 
     .navbar-nav>li {
         margin-bottom: -5px;
+    }
+
+    #headerText {
+        margin-bottom: 500px;
     }
 
     #resume {
