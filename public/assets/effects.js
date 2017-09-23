@@ -265,14 +265,14 @@ $(document).ready(function() {
 
 		$("#sendButton").on("click", function(event) {
       event.preventDefault();
-      var mailOptions = {
+      var newMessage = {
         name: $("#name").val().trim(),
         email: $("#email").val().trim(),
         message: $("#message").val().trim()
       };
 
       // Question: What does this code do??
-      $.post("/contact", mailOptions)
+      $.post("/contact", newMessage)
       .done(function(data) {
         console.log("Thanks for contacting!");
       });

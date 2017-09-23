@@ -3,6 +3,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var nodemailer = require('nodemailer');
+var path = require("path");
 
 // Sets up the Express App
 // =============================================================
@@ -18,21 +19,55 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // Routes
 // =============================================================
 
-// Basic route that sends the user first to the AJAX Page
+// permit access to public file
+app.use(express.static('public'));
+
+// homepage route
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname, "public/index.html"));
+});
+
+// redirect any route to homepage
 app.get("/*", function(req, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
+  res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
 // Email
 // =============================================================
 
-var transporter = nodemailer.createTransport({
-  service: 'Godaddy',
-  auth: {
-    user: 'vit@vitbenton.com',
-    pass: 'sevon1982'
-  }
+app.post("/contact", function(req, res) {
+
+	var sender = req.body.email;
+	var name = req.body.name;
+	var message = req.body.message;
+
+	var transporter = nodemailer.createTransport({
+	  service: 'Godaddy',
+	  auth: {
+	    user: 'vit@vitbenton.com',
+	    pass: 'sevon1982'
+	  }
+	});
+
+	var mailOptions = {
+	  from: 'vit@vitbenton.com',
+	  to: sender,
+	  subject: 'Sending Email using Node.js',
+	  text: message
+	};
+
+	transporter.sendMail(mailOptions, function(error, info){
+	  if (error) {
+	    console.log(error);
+	  } else {
+	    console.log('Email sent: ' + info.response);
+	  }
+	});
+
+	res.redirect("/");
+
 });
+
 
 
 // Starts the server to begin listening
