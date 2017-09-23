@@ -1,0 +1,20 @@
+{
+  "name": "portfolio2017",
+  "version": "1.0.0",
+  "description": "Vit Benton's website/portfolio",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VitBenton88/portfolio2017.git"
+  },
+  "author": "Vit Benton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VitBenton88/portfolio2017/issues"
+  },
+  "homepage": "https://github.com/VitBenton88/portfolio2017#readme"
+}

@@ -261,5 +261,24 @@ $(document).ready(function() {
 
 	//--------------------------------
 
+	//Collect contact form and create POST request to send email
+
+		$("#sendButton").on("click", function(event) {
+      event.preventDefault();
+      var mailOptions = {
+        name: $("#name").val().trim(),
+        email: $("#email").val().trim(),
+        message: $("#message").val().trim()
+      };
+
+      // Question: What does this code do??
+      $.post("/contact", mailOptions)
+      .done(function(data) {
+        console.log("Thanks for contacting!");
+      });
+    });
+
+	//--------------------------------
+
 //----------------------------------------------------------------END OF SCRIPT	
 });
