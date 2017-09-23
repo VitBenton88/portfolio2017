@@ -148,9 +148,9 @@ $(document).ready(function() {
 
 	//--------------------------------
 
-		//message button effects
+		//expandBtn button effects
 
-	var messageBTN = $('#messageStart');
+	var expandBtn = $('.expandBtn');
 	var sendBTN = $('#messageSend');
 	var socialIcon = $('.socialIcons');
 	var headerLinks = $('.headerLinks')
@@ -174,7 +174,8 @@ $(document).ready(function() {
 	});
 
 		//message start button
-    $( messageBTN ).hover(function() {
+    $( expandBtn ).hover(function() {
+
       if ( BTNstate ) {
         $( this ).animate({
           backgroundColor: "white",
@@ -186,7 +187,7 @@ $(document).ready(function() {
         $( this ).animate({
           backgroundColor: "transparent",
           color: "white",
-          width: 240
+          width: 260
         }, 300 );
       }
       BTNstate = !BTNstate;
@@ -213,7 +214,7 @@ $(document).ready(function() {
     	// Animate on click
 
     	//message start button
-    $( messageBTN ).click(function() {
+    $( expandBtn ).click(function() {
       
         $( this ).animate({
           color: "white"
@@ -248,6 +249,17 @@ $(document).ready(function() {
 
 	//--------------------------------
 
+	//show portfolio modals without <button> clicks
+
+		$('.portfolioIcons').click(function(){
+
+			var modalType = $(this).attr('data-target');
+
+			$(modalType).modal("show");
+
+		})
+
+	//--------------------------------
 
 //----------------------------------------------------------------END OF SCRIPT	
 });

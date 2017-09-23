@@ -103,35 +103,162 @@
 
 				<p>I have developed web-applications using HTML5, CSS3, and JavaScript alongside a variety of frameworks and libraries. I am also experienced with back-end developement involving database and server-side code. Checkout some of the projects I have worked on and the technolgoy used to develop them:</p>
 
-				<div class="col-lg-3 col-lg-offset-1 portfolioIcons">
+				<div data-target="#simpsonsModal" class="col-lg-3 col-lg-offset-1 col-sm-4 portfolioIcons">
 
 					<h5><i>The Simpsons</i> Trivia Game</h5>
 
 					<img src="assets/images/simpsons_trivia.jpg">
 
-					<div class="overlay"></div>
+					<div class="overlay">
+						
+						<img class="tech" src="assets/images/html.png">
+
+						<img class="tech" src="assets/images/css.png">
+
+						<img class="tech" src="assets/images/js.png">
+
+						<img class="tech" src="assets/images/jQuery.jpg">
+
+					</div>
 					
 				</div>
 
-				<div class="col-lg-3 col-lg-offset-1 portfolioIcons">
+			<!-- Simpsons Modal -->
+			<div id="simpsonsModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog modal-md">
+
+			    <!-- Modal Content-->
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title"><i>The Simpsons</i> Trivia Game</h4>
+			      </div>
+			      <div class="modal-body">
+
+					<h4 class="projectTitle">Sole Developer & Designer</h4>
+
+					<hr>
+
+					<ul class="modalList">
+
+						<li>Trivia game using JavaScript for logic, jQuery to manipulate HTML, and CSS for styling.</li>
+
+						<li>Questions and timers are dynamically adding using logic in jQuery and Javascript.</li>
+
+					</ul>
+
+					<button onclick="location.href='https://vitbenton88.github.io/TriviaGame/'" type="button" class="btn expandBtn">View on GitHub Pages</button>
+
+			      </div>
+			   
+			    </div>
+
+			  </div>
+			</div>
+
+				<div data-target="#trainModal" class="col-lg-3 col-lg-offset-1 col-sm-4 portfolioIcons">
 
 					<h5>Train Scheduler</h5>
 
 					<img src="assets/images/trainScheduler.jpg">
 
-					<div class="overlay"></div>
+					<div class="overlay">
+						
+						<img class="tech" src="assets/images/bootstrap.png">
+
+						<img class="tech" src="assets/images/moment.png">
+
+						<img class="tech" src="assets/images/js.png">
+
+						<img class="tech" src="assets/images/firebase.png">
+						
+					</div>
 					
 				</div>
 
-				<div class="col-lg-3 col-lg-offset-1 portfolioIcons">
+			<!-- Train Modal -->
+			<div id="trainModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog modal-md">
+
+			    <!-- Modal Content-->
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title">Train Scheduler</h4>
+			      </div>
+			      <div class="modal-body">
+
+					<h4 class="projectTitle">Sole Developer & Designer</h4>
+
+					<hr>
+
+					<ul class="modalList">
+
+						<li>Train schedule application that incorporates Firebase to host arrival and departure data. Retrieves and manipulates time data with Moment.js. This app provides up-to-date information about various trains, their arrival times and how many minutes remain until arrival.</li>
+
+						<li>Trains are dynamically added and removed both in the browser and in Firebase by user input. Styling done using the Bootstrap library.</li>
+
+					</ul>
+
+					<button onclick="location.href='https://vitbenton88.github.io/TrainScheduler/'" type="button" class="btn expandBtn">View on GitHub Pages</button>
+
+			      </div>
+			   
+			    </div>
+
+			  </div>
+			</div>
+
+				<div data-target="#bamazonModal" class="col-lg-3 col-lg-offset-1 col-sm-4 portfolioIcons">
 
 					<h5>Bamazon</h5>
 
 					<img src="assets/images/bamazon.jpg">
 
-					<div class="overlay"></div>
+					<div class="overlay">
+						
+						<img class="tech" src="assets/images/nodeJS.png">
+
+						<img class="tech" src="assets/images/mysql.png">
+
+						<img class="tech" src="assets/images/js.png">
+						
+					</div>
 					
 				</div>
+
+			<!-- Bamazon Modal -->
+			<div id="bamazonModal" class="modal fade" role="dialog">
+			  <div class="modal-dialog modal-md">
+
+			    <!-- Modal Content-->
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal">&times;</button>
+			        <h4 class="modal-title">Bamazon</h4>
+			      </div>
+			      <div class="modal-body">
+
+					<h4 class="projectTitle">Sole Developer</h4>
+
+					<hr>
+
+					<ul class="modalList">
+
+						<li>Amazon-like storefront using Node.JS and a MySQL database. The app takes in orders and depletes stock from the store's inventory. In addition, the app provides the option of updating the MySQL database and issuing inventory reports.</li>
+
+						<li>This is a Node.JS app that incorporates a MySQL database and uses the MySQL, Inquirer, and Table Node modules.</li>
+
+					</ul>
+
+					<button onclick="location.href='https://github.com/VitBenton88/bamazon'" type="button" class="btn expandBtn">View on GitHub</button>
+
+			      </div>
+			   
+			    </div>
+
+			  </div>
+			</div>
 
 			</div>
 
@@ -213,15 +340,15 @@
 
 			<div>
 				<!-- Trigger the modal with a button -->
-				<button type="button" class="btn" id="messageStart" data-toggle="modal" data-target="#myModal">Message Me</button>
+				<button type="button" class="btn expandBtn" data-toggle="modal" data-target="#contactModal">Message Me</button>
 
 			</div>
 
-			<!-- Modal -->
-			<div id="myModal" class="modal fade" role="dialog">
+			<!-- Contact Modal -->
+			<div id="contactModal" class="modal fade" role="dialog">
 			  <div class="modal-dialog modal-lg">
 
-			    <!-- Modal content-->
+			    <!-- Modal Content-->
 			    <div class="modal-content">
 			      <div class="modal-header">
 			        <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -243,7 +370,7 @@
 						    <input placeholder="Message*" type="text" class="form-control" id="message">
 						  </div>
 
-						  <button type="submit" class="btn" id="messageSend" data-toggle="modal" data-target="#myModal">SEND</button>
+						  <button type="submit" class="btn expandBtn" data-toggle="modal" data-target="#myModal">SEND</button>
 
 					</form>
 

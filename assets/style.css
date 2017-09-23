@@ -209,6 +209,7 @@ nav {
     margin-top: 20px;
     text-align: center;
     color: white;
+    cursor: pointer;
 }
 
 .portfolioIcons img {
@@ -229,22 +230,37 @@ nav {
   transition: .5s ease;
   background-color: #3f6379;
   border-radius: 15px;
+  padding-top: 20px;
 }
 
 .portfolioIcons:hover .overlay {
-  opacity: 0.9;
+  opacity: 1;
+}
+
+.overlay .tech {
+  width: 100px;
+  height: auto;
+  display: inline;
+}
+
+.overlay {
   cursor: pointer;
 }
 
-.techIcons {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+#simpsonsModal, #trainModal, #bamazonModal {
+    background: -webkit-linear-gradient(top left, #9f6379, #ff6379);
+    background: -o-linear-gradient(top left, #9f6379, #ff6379);
+    background: linear-gradient(to bottom right, #9f6379, #ff6379);
 }
+
+.projectTitle{
+    color: #a3a3a3;
+}
+
+.modalList {
+    font-size: 16px;
+}
+
 
 /* CHARTS */
 
@@ -329,18 +345,19 @@ nav {
     font-size: 18px;
 }
 
-#messageStart {
+.expandBtn {
     border-color: white;
     border-radius: 8px;
     background: none;
     margin: 40px auto;
     display: block;
-    width: 250px;
+    width: auto;
     height: 80px;
     font-size: 24px;
+    min-width: 260px
 }
 
-#messageStart:focus {
+.expandBtn:focus {
     outline: none;
 }
 
@@ -380,7 +397,7 @@ nav {
     display: none; 
 }
 
-#myModal {
+#contactModal {
     background: -webkit-linear-gradient(top left, #9f6379, #3f6379);
     background: -o-linear-gradient(top left, #9f6379, #3f6379);
     background: linear-gradient(to bottom right, #9f6379, #3f6379);
