@@ -41,18 +41,20 @@ app.post("/contact", function(req, res) {
 	var name = req.body.name;
 	var message = req.body.message;
 
+	console.log(sender);
+
 	var transporter = nodemailer.createTransport({
-	  service: 'Godaddy',
+	  service: 'gmail',
 	  auth: {
-	    user: 'vit@vitbenton.com',
-	    pass: 'sevon1982'
+	    user: 'viteksk8alot@gmail.com',
+	    pass: 'qgoxwhjjfuivgdxu'
 	  }
 	});
 
 	var mailOptions = {
-	  from: 'vit@vitbenton.com',
-	  to: sender,
-	  subject: 'Sending Email using Node.js',
+	  from: 'viteksk8alot@gmail.com',
+	  to: 'vit@vitbenton.com',
+	  subject: 'Sending Email using Node.js from: ' + sender,
 	  text: message
 	};
 

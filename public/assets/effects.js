@@ -263,6 +263,16 @@ $(document).ready(function() {
 
 	//Collect contact form and create POST request to send email
 
+		//function for clearing out contact form
+
+		function clearForm () {
+
+			for (var i = 0; i < $('#contactForm').length; i++) {
+			$('#contactForm')[i].reset();
+		};
+
+		};
+
 		$("#sendButton").on("click", function(event) {
       event.preventDefault();
       var newMessage = {
@@ -275,6 +285,8 @@ $(document).ready(function() {
       $.post("/contact", newMessage)
       .done(function(data) {
         console.log("Thanks for contacting!");
+        $('.close').click();//close contact modal
+        clearForm();//clear form
       });
     });
 
