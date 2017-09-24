@@ -41,32 +41,36 @@ app.post("/contact", function(req, res) {
 	var name = req.body.name;
 	var message = req.body.message;
 
-	console.log(sender);
+	if (!sender == '' || !name == '' || !message == ''){
 
-	var transporter = nodemailer.createTransport({
-	  service: 'gmail',
-	  auth: {
-	    user: 'viteksk8alot@gmail.com',
-	    pass: 'qgoxwhjjfuivgdxu'
-	  }
-	});
+		console.log("Email sent from: " + sender);
 
-	var mailOptions = {
-	  from: 'viteksk8alot@gmail.com',
-	  to: 'vit@vitbenton.com',
-	  subject: 'Sending Email using Node.js from: ' + sender,
-	  text: message
+		var transporter = nodemailer.createTransport({
+		  service: 'gmail',
+		  auth: {
+		    user: 'viteksk8alot@gmail.com',
+		    pass: 'qgoxwhjjfuivgdxu'
+		  }
+		});
+
+		var mailOptions = {
+		  from: 'viteksk8alot@gmail.com',
+		  to: 'vit@vitbenton.com',
+		  subject: 'Sending Email using Node.js from: ' + sender,
+		  text: message
+		};
+
+		transporter.sendMail(mailOptions, function(error, info){
+		  if (error) {
+		    console.log(error);
+		  } else {
+		    console.log('Email sent: ' + info.response);
+		  }
+		});
+
+		res.redirect("/");
+
 	};
-
-	transporter.sendMail(mailOptions, function(error, info){
-	  if (error) {
-	    console.log(error);
-	  } else {
-	    console.log('Email sent: ' + info.response);
-	  }
-	});
-
-	res.redirect("/");
 
 });
 

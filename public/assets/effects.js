@@ -265,30 +265,68 @@ $(document).ready(function() {
 
 		//function for clearing out contact form
 
+		var contactForm = $('#contactForm');
+		var formInputs = [$("#name"), $("#email"), $("#message")];
+
 		function clearForm () {
 
-			for (var i = 0; i < $('#contactForm').length; i++) {
-			$('#contactForm')[i].reset();
+			for (var i = 0; i < contactForm.length; i++) {
+				contactForm[i].reset();
+				formInputs[i].css('box-shadow','none');
+				formInputs[i].css('border-color','transparent');
+			};
 		};
 
+		// form validator function
+
+		function formVal () {
+
+			for (var i = 0; i < formInputs.length; i++) {
+				if (formInputs[i].val().trim() == ''){
+
+					formInputs[i].css('box-shadow','0px 0px 0px red');
+					formInputs[i].css('border-color','red');
+					formInputs[i].css('box-shadow','6px 6px 2px red');
+
+					return false;
+
+				} else {
+					formInputs[i].css('box-shadow','none');
+					formInputs[i].css('border-color','transparent');
+
+					return true;
+				}
+			};
 		};
 
-		$("#sendButton").on("click", function(event) {
-      event.preventDefault();
-      var newMessage = {
-        name: $("#name").val().trim(),
-        email: $("#email").val().trim(),
-        message: $("#message").val().trim()
-      };
+		$("#sendButton").on("click", function() {
 
-      // Question: What does this code do??
-      $.post("/contact", newMessage)
-      .done(function(data) {
-        console.log("Thanks for contacting!");
-        $('.close').click();//close contact modal
-        clearForm();//clear form
-      });
+			event.preventDefault();
+
+			if (formVal()){
+
+		      var newMessage = {
+		        name: $("#name").val().trim(),
+		        email: $("#email").val().trim(),
+		        message: $("#message").val().trim()
+		    };
+
+		      // Question: What does this code do??
+		      $.post("/contact", newMessage)
+		      .done(function(data) {
+		        console.log("Thanks for contacting!");
+		        $('.close').click();//close contact modal
+		        clearForm();//clear form
+
+		      });
+
+		   }   
+
     });
+
+		//clear form on close
+
+		$(".close").on("click", clearForm);
 
 	//--------------------------------
 
