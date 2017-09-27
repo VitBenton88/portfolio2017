@@ -271,7 +271,31 @@ $(document).ready(function() {
 
 			for (var i = 0; i < contactForm.length; i++) {
 				contactForm[i].reset();
+				$("#name").css('background-color','white');
+				$("#email").css('background-color','white');
+				$("#message").css('background-color','white');
 			};
+		};
+
+		//function for display warning symbol in empty form input
+
+		function formWarning(){
+
+			var nameInput = $("#name").val().trim();
+			var emailInput = $("#email").val().trim();
+			var messageInput = $("#message").val().trim();
+
+			if (nameInput == ''){
+				$("#name").css('background-color','#ffe4b2');
+			}
+
+			if (emailInput == ''){
+				$("#email").css('background-color','#ffe4b2');
+			}
+
+			if (messageInput == ''){
+				$("#message").css('background-color','#ffe4b2');
+			}
 		};
 
 		// form validator function
@@ -281,10 +305,9 @@ $(document).ready(function() {
 			var nameInput = $("#name").val().trim();
 			var emailInput = $("#email").val().trim();
 			var messageInput = $("#message").val().trim();
-						console.log(nameInput);
 
 				if (nameInput == '' || emailInput == '' || messageInput == ''){
-
+					formWarning();
 					return false;
 
 				} else {
@@ -326,16 +349,15 @@ $(document).ready(function() {
 					 success: function(response){
 			          console.log("Thanks for contacting!");
 			          $('.close').click();//close contact modal
-			          clearForm();//clear form
 			          alert('Thanks for contacting!');
 					 },
 					 error: function(response){
-			          alert("Server: Message not sent, make sure form is filled out correctly");
+			          alert("Message not sent, make sure form is filled out correctly");
 					 }
 				}); 
 
 		   }   else {
-		   			alert("Client: Message not sent, make sure form is filled out correctly");
+		   			alert("Message not sent, make sure form is filled out correctly");
 		   };
 
     });
