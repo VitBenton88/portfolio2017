@@ -265,15 +265,12 @@ $(document).ready(function() {
 
 		//function for clearing out contact form
 
-		var contactForm = $('#contactForm');
-		var formInputs = [$("#name"), $("#email"), $("#message")];
-
 		function clearForm () {
+
+			var contactForm = $('#contactForm');
 
 			for (var i = 0; i < contactForm.length; i++) {
 				contactForm[i].reset();
-				formInputs[i].css('box-shadow','none');
-				formInputs[i].css('border-color','transparent');
 			};
 		};
 
@@ -281,22 +278,19 @@ $(document).ready(function() {
 
 		function formVal () {
 
-			for (var i = 0; i < formInputs.length; i++) {
-				if (formInputs[i].val().trim() == ''){
+			var nameInput = $("#name").val().trim();
+			var emailInput = $("#email").val().trim();
+			var messageInput = $("#message").val().trim();
+						console.log(nameInput);
 
-					formInputs[i].css('box-shadow','0px 0px 0px red');
-					formInputs[i].css('border-color','red');
-					formInputs[i].css('box-shadow','6px 6px 2px red');
+				if (nameInput == '' || emailInput == '' || messageInput == ''){
 
 					return false;
 
 				} else {
-					formInputs[i].css('box-shadow','none');
-					formInputs[i].css('border-color','transparent');
 
 					return true;
-				}
-			};
+				};
 		};
 
 		$("#sendButton").on("click", function() {
@@ -305,13 +299,18 @@ $(document).ready(function() {
 
 			if (formVal()) {
 
+				var contactForm = $('#contactForm');
+				var nameInput = $("#name").val().trim();
+				var emailInput = $("#email").val().trim();
+				var messageInput = $("#message").val().trim();
+
 		      var newMessage = {
-		        name: $("#name").val().trim(),
-		        email: $("#email").val().trim(),
-		        message: $("#message").val().trim()
+		        name: nameInput,
+		        email: emailInput,
+		        message: messageInput
 		    };
 
-		      // Question: What does this code do??
+		      // old post handling code
 		      // $.post("/contact", newMessage)
 		      // .done(function(data) {
 		      //   console.log("Thanks for contacting!");
@@ -331,11 +330,13 @@ $(document).ready(function() {
 			          alert('Thanks for contacting!');
 					 },
 					 error: function(response){
-			          console.log("Message not sent, make sure form is filled out correctly");
+			          alert("Server: Message not sent, make sure form is filled out correctly");
 					 }
 				}); 
 
-		   }   
+		   }   else {
+		   			alert("Client: Message not sent, make sure form is filled out correctly");
+		   };
 
     });
 

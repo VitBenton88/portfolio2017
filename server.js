@@ -37,9 +37,11 @@ app.get("/*", function(req, res) {
 
 app.post("/contact", function(req, res) {
 
-	var sender = res.email;
-	var name = res.name;
-	var message = res.message;
+	var sender = req.body.email;
+	var name = req.body.name;
+	var message = req.body.message;
+
+	console.log(sender);
 
 	if (!sender == '' || !name == '' || !message == ''){
 
