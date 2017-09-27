@@ -303,7 +303,7 @@ $(document).ready(function() {
 
 			event.preventDefault();
 
-			if (formVal()){
+			if (formVal()) {
 
 		      var newMessage = {
 		        name: $("#name").val().trim(),
@@ -312,13 +312,28 @@ $(document).ready(function() {
 		    };
 
 		      // Question: What does this code do??
-		      $.post("/contact", newMessage)
-		      .done(function(data) {
-		        console.log("Thanks for contacting!");
-		        $('.close').click();//close contact modal
-		        clearForm();//clear form
+		      // $.post("/contact", newMessage)
+		      // .done(function(data) {
+		      //   console.log("Thanks for contacting!");
+		      //   $('.close').click();//close contact modal
+		      //   clearForm();//clear form
 
-		      });
+		      // });
+
+				$.ajax({
+					 url: '/contact',
+					 type: "POST",
+					 data: newMessage,
+					 success: function(response){
+			          console.log("Thanks for contacting!");
+			          $('.close').click();//close contact modal
+			          clearForm();//clear form
+			          alert('Thanks for contacting!');
+					 },
+					 error: function(response){
+			          console.log("Message not sent, make sure form is filled out correctly");
+					 }
+				}); 
 
 		   }   
 

@@ -37,9 +37,9 @@ app.get("/*", function(req, res) {
 
 app.post("/contact", function(req, res) {
 
-	var sender = req.body.email;
-	var name = req.body.name;
-	var message = req.body.message;
+	var sender = res.email;
+	var name = res.name;
+	var message = res.message;
 
 	if (!sender == '' || !name == '' || !message == ''){
 
@@ -68,8 +68,10 @@ app.post("/contact", function(req, res) {
 		  }
 		});
 
-		res.redirect("/");
+		res.json({success: true});
 
+	} else {
+		res.json({error: true});
 	};
 
 });
