@@ -1,3 +1,4 @@
+
 // Dependencies
 // =============================================================
 var express = require("express");
@@ -57,8 +58,9 @@ app.post("/contact", function(req, res) {
 
 		var mailOptions = {
 		  from: 'viteksk8alot@gmail.com',
+		  replyTo: 'sender',
 		  to: 'vit@vitbenton.com',
-		  subject: 'Sending Email using Node.js from: ' + sender,
+		  subject: sender + " contacted you through VitBenton.com!",
 		  text: message
 		};
 
