@@ -277,7 +277,7 @@ $(document).ready(function() {
 			};
 		};
 
-		//function for display warning symbol in empty form input
+		//function for displaying warning colors in empty form input
 
 		function formWarning(){
 
@@ -316,6 +316,18 @@ $(document).ready(function() {
 				};
 		};
 
+		//function for alerting when contact form is not properly filled out
+
+		function formAlert (){
+			alert(
+
+				'Message not sent, make sure form is filled out correctly.\n\n' 
+			    + "\t• Make sure each field is filled.\n" 
+			    + '\t• Make sure the provided email is in the correct format:\n'
+			    + '\t- e.g. example@example.com' 
+				);
+		};
+
 		$("#sendButton").on("click", function() {
 
 			event.preventDefault();
@@ -340,13 +352,13 @@ $(document).ready(function() {
 			        alert("Thanks for contacting");
 			        $('.close').click();//close contact modal
 		    	} else{
-		    		alert("Message not sent, make sure form is filled out correctly");
+		    		formAlert();
 		    	};
 
 		      });
 
 		   }   else {
-		   			alert("Message not sent, make sure form is filled out correctly");
+		   			formAlert();
 		   };
 
     });
