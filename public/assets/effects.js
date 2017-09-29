@@ -333,28 +333,17 @@ $(document).ready(function() {
 		        message: messageInput
 		    };
 
-		      // old post handling code
-		      // $.post("/contact", newMessage)
-		      // .done(function(data) {
-		      //   console.log("Thanks for contacting!");
-		      //   $('.close').click();//close contact modal
-		      //   clearForm();//clear form
+		      
+		      $.post("/contact", newMessage)
+		      .done(function(data) {
+		      	if (data === true){
+			        alert("Thanks for contacting");
+			        $('.close').click();//close contact modal
+		    	} else{
+		    		alert("Message not sent, make sure form is filled out correctly");
+		    	};
 
-		      // });
-
-				$.ajax({
-					 url: '/contact',
-					 type: "POST",
-					 data: newMessage,
-					 success: function(response){
-			          console.log("Thanks for contacting!");
-			          $('.close').click();//close contact modal
-			          alert('Thanks for contacting!');
-					 },
-					 error: function(response){
-			          alert("Message not sent, make sure form is filled out correctly");
-					 }
-				}); 
+		      });
 
 		   }   else {
 		   			alert("Message not sent, make sure form is filled out correctly");

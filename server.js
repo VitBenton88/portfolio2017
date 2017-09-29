@@ -5,6 +5,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var nodemailer = require('nodemailer');
 var path = require("path");
+var validator = require('validator');
 
 // Sets up the Express App
 // =============================================================
@@ -44,7 +45,7 @@ app.post("/contact", function(req, res) {
 
 	console.log(sender);
 
-	if (!sender == '' || !name == '' || !message == ''){
+	if (!validator.isEmpty(sender) && !validator.isEmpty(name) && !validator.isEmpty(message) && validator.isEmail(sender)){
 
 		console.log("Email sent from: " + sender);
 
@@ -72,10 +73,10 @@ app.post("/contact", function(req, res) {
 		  }
 		});
 
-		res.json({success: true});
+		res.send(true);
 
 	} else {
-		res.json({error: true});
+		res.send(false);
 	};
 
 });
