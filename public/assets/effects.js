@@ -313,7 +313,7 @@ $(document).ready(function() {
 		function formAlert (){
 			alert(
 
-				'Message not sent, make sure form is filled out correctly.\n\n' 
+				'Message not sent. Please make sure the form is filled out correctly.\n\n' 
 			    + "\t• Make sure each field is filled.\n" 
 			    + '\t• Make sure the provided email is in the correct format:\n'
 			    + '\t- e.g. example@example.com' 
