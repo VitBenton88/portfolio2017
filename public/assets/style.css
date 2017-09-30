@@ -226,7 +226,8 @@ nav {
   transition: .5s ease;
   background-color: #3f6379;
   border-radius: 15px;
-  padding-top: 20px;
+  padding: 60px 5px 5px 5px;
+  cursor: pointer;
 }
 
 .portfolioIcons:hover .overlay {
@@ -237,10 +238,7 @@ nav {
   width: 100px;
   height: auto;
   display: inline;
-}
-
-.overlay {
-  cursor: pointer;
+  padding: 10px;
 }
 
 #simpsonsModal, #trainModal, #bamazonModal, #GifTasticModal {
