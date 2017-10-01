@@ -1,11 +1,16 @@
 
 // Dependencies
 // =============================================================
+var dotenv = require('dotenv');
 var express = require("express");
 var bodyParser = require("body-parser");
 var nodemailer = require('nodemailer');
 var path = require("path");
-var validator = require('validator');
+var validator = require('validator');//for contact form validation
+// var email = require('./email.env')
+
+//load environment variables
+dotenv.config();
 
 // Sets up the Express App
 // =============================================================
@@ -52,13 +57,13 @@ app.post("/contact", function(req, res) {
 		var transporter = nodemailer.createTransport({
 		  service: 'gmail',
 		  auth: {
-		    user: 'viteksk8alot@gmail.com',
-		    pass: 'qgoxwhjjfuivgdxu'
+		    user: process.env.EMAIL_USER,
+		    pass: process.env.EMAIL_PASS
 		  }
 		});
 
 		var mailOptions = {
-		  from: 'viteksk8alot@gmail.com',
+		  from: process.env.EMAIL_USER,
 		  replyTo: sender,
 		  to: 'vit@vitbenton.com',
 		  subject: sender + " contacted you through VitBenton.com!",
