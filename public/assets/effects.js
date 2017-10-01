@@ -119,7 +119,6 @@ $(document).ready(function() {
 
 	//on mobile, remove parallax, insert mobile styling (portfolio)
 
-
 	var portSection = $('#portfolio');
 	var portHeader = $('#portHeader');
 	var portParallax = $('.portParallax');
