@@ -55,7 +55,7 @@ app.post("/contact", function(req, res) {
 		console.log("Email sent from: " + sender);
 
 		var transporter = nodemailer.createTransport({
-		  service: 'gmail',
+		  service: process.env.EMAIL_SER,
 		  auth: {
 		    user: process.env.EMAIL_USER,
 		    pass: process.env.EMAIL_PASS
@@ -65,7 +65,7 @@ app.post("/contact", function(req, res) {
 		var mailOptions = {
 		  from: process.env.EMAIL_USER,
 		  replyTo: sender,
-		  to: 'vit@vitbenton.com',
+		  to: process.env.EMAIL_REC,
 		  subject: sender + " contacted you through VitBenton.com!",
 		  text: message
 		};
