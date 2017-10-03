@@ -59,7 +59,7 @@ $(document).ready(function() {
 
 	//--------------------------------
 
-	// hides nav table instead of default height change, for better toggle animation:
+	// hides <li>s in mobile nav table in mobile nav instead of default height change, for better toggle animation:
 
 	$('body').on('click', 'button', function(){
 
@@ -80,7 +80,7 @@ $(document).ready(function() {
 
 	//--------------------------------
 
-	//on desktop, change navbar background color when home link is not activie i.e. not at the top
+	//on desktop, change navbar background color when home section is not active i.e. the view is not at the top of the page
 
 	var homeLI = $('#homeLink');
 	var active = '';
@@ -117,7 +117,7 @@ $(document).ready(function() {
 
 	//--------------------------------
 
-	//on mobile, remove parallax, insert mobile styling (portfolio)
+	//on mobile, remove parallax, insert mobile styling (portfolio section)
 
 	var portSection = $('#portfolio');
 	var portHeader = $('#portHeader');
@@ -139,7 +139,7 @@ $(document).ready(function() {
 
 	//--------------------------------
 
-		//expandBtn button effects
+		//expandBtn button effects on portfolio and contact modal
 
 	var expandBtn = $('.expandBtn');
 	var sendBTN = $('#messageSend');
@@ -149,7 +149,7 @@ $(document).ready(function() {
 
 		// Animate on hover
 
-		//header links AKA 'learn more'
+		//'learn more' header link that scrolls to bio section
 		$( headerLinks ).hover(function() {
 	  if ( BTNstate ) {
 	    $( this ).animate({
@@ -240,7 +240,7 @@ $(document).ready(function() {
 
 	//--------------------------------
 
-	//show portfolio modals without <button> clicks
+	//show portfolio modals without the click of a <button> html element
 
 		$('.portfolioIcons').click(function(){
 
@@ -268,7 +268,7 @@ $(document).ready(function() {
 			};
 		};
 
-		//function for displaying warning colors in empty form input
+		//function for displaying warning colors in form inputs that are empty
 
 		function formWarning(){
 
@@ -289,7 +289,7 @@ $(document).ready(function() {
 			}
 		};
 
-		// form validator function
+		// contact form validator function
 
 		function formVal () {
 

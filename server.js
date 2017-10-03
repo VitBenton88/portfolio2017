@@ -50,7 +50,7 @@ app.post("/contact", function(req, res) {
 
 	console.log(sender);
 
-	if (!validator.isEmpty(sender) && !validator.isEmpty(name) && !validator.isEmpty(message) && validator.isEmail(sender)){
+	if (!validator.isEmpty(sender) && !validator.isEmpty(name) && !validator.isEmpty(message) && validator.isEmail(sender)) {
 
 		console.log("Email sent from: " + sender);
 
@@ -85,8 +85,6 @@ app.post("/contact", function(req, res) {
 	};
 
 });
-
-
 
 // Starts the server to begin listening
 // =============================================================

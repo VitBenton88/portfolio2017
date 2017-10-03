@@ -12,11 +12,15 @@ $( window ).load(function() {
 	var mySQLdata = 30; 
 	var nodeData = 40;
 	var expressData = 30;
+	var handlebarsData = 30;
 	var photoshopData = 70;
+
+	var frontEndData = [htmlData, cssData, bootsrapData, jsData, jqueryData, photoshopData, respDes];
+	var backEndData = [ajaxData, firebaseData, mySQLdata, nodeData, expressData, handlebarsData];
 
 	var barChartOrientation = 'bar'; 
 	var frontendLabels = ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "Abode Photoshop", "Responsive Design"];
-	var backendLabels = ["AJAX", "Express", "Google Firebase", "mySQL", "Node.js"];
+	var backendLabels = ["AJAX", "Google Firebase", "mySQL", "Node.js", "Express.js", "Handlebars.js"];
 	var ctxFrontend = $("#frontendCanvas");
 	var ctxBackend = $("#backendCanvas");
 	var chartOptions = {
@@ -56,7 +60,7 @@ $( window ).load(function() {
 		    data: {
 		        labels: frontendLabels,
 		        datasets: [{
-		            data: [htmlData, cssData, bootsrapData, jsData, jqueryData, photoshopData, respDes],
+		            data: frontEndData,
 		            backgroundColor: [
 		                'rgba(207, 99, 121, 0.4)',
 		                'rgba(207, 99, 121, 0.4)',
@@ -88,7 +92,7 @@ $( window ).load(function() {
 		    data: {
 		        labels: backendLabels,
 		        datasets: [{
-		            data: [ajaxData, expressData, firebaseData, mySQLdata, nodeData],
+		            data: backEndData,
 		            backgroundColor: [
 		                'rgba(34, 34, 34, 0.8)',
 		                'rgba(34, 34, 34, 0.8)',
@@ -119,7 +123,7 @@ $( window ).load(function() {
 	var backendInView = false;
 	var frontendInView = false;
 
-	function isScrolledIntoView(elem)
+	function isScrolledIntoView(elem)//function for determining if HTML element is scrolled into view
 	{
 	    var docViewTop = $(window).scrollTop();
 	    var docViewBottom = docViewTop + $(window).height();
@@ -130,7 +134,7 @@ $( window ).load(function() {
 	    return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
 	}
 
-	$(window).scroll(function() {//load chart when section is in viewport 
+	$(window).scroll(function() {//load front-end chart when section is in viewport 
 	    if (isScrolledIntoView($('#frontendCanvas'))) {
 	        if (frontendInView) { return; }
 	        frontendInView = true;
@@ -140,7 +144,7 @@ $( window ).load(function() {
 	    }
 	});
 
-	$(window).scroll(function() {//load chart when section is in viewport 
+	$(window).scroll(function() {//load back-end chart when section is in viewport 
 	    if (isScrolledIntoView($('#backendCanvas'))) {
 	        if (backendInView) { return; }
 	        backendInView = true;
