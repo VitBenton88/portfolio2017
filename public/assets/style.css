@@ -639,7 +639,7 @@ footer .fa {
     }
 
     .fixedHeightRow {/* keep chart rows from pushing subsequent rows when chart is loaded */
-        min-height: 700px;
+        min-height: 560px;
     }
 
 }
