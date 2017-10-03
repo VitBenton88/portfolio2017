@@ -638,8 +638,8 @@ footer .fa {
         padding-top: 50px;
     }
 
-    .fixedHeightRow {
-        min-height: 526px;
+    .fixedHeightRow {/* keep chart rows from pushing subsequent rows when chart is loaded */
+        min-height: 700px;
     }
 
 }
