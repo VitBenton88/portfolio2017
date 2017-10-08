@@ -269,10 +269,15 @@ nav {
 
 #chartWrap {
     padding-top: 5px;
+    min-height: 600px;
 }
 
 .backend{
     background-color: #ff6379;
+}
+
+.fixedHeightRow {/* keep chart rows from pushing subsequent rows when chart is loaded */
+    min-height: 560px;
 }
 
 /* RESUME */
