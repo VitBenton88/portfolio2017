@@ -507,12 +507,12 @@ footer .fa {
     margin-bottom: 0px;
     }
 
-    #resume {
-        padding-top: 10px;
+    #chartWrap, .fixedHeightRow {
+        min-height: 200px;
     }
 
-    .fixedHeightRow {
-        min-height: 260px;
+    #resume {
+        padding-top: 10px;
     }
 
     form {
@@ -559,12 +559,12 @@ footer .fa {
         margin: 20px auto 20px auto;
     }
 
-    #resume {
-        padding-top: 5px;
+    #chartWrap, .fixedHeightRow {
+        min-height: 350px;
     }
 
-    .fixedHeightRow {
-        min-height: 421px;
+    #resume {
+        padding-top: 5px;
     }
 
     .navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
@@ -595,8 +595,8 @@ footer .fa {
         padding-top: 50px;
     }
 
-    .fixedHeightRow {
-        min-height: 526px;
+    #chartWrap, .fixedHeightRow {
+        min-height: 350px;
     }
 
     form {
