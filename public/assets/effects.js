@@ -139,6 +139,7 @@ $(document).ready(function() {
     var sendBTN = $('#messageSend');
     var socialIcon = $('.socialIcons');
     var headerLinks = $('.headerLinks')
+    var emailLink = $('#emailLink')
     var BTNstate = true;
 
     // Animate on hover
@@ -215,9 +216,23 @@ $(document).ready(function() {
 
     });
 
-    //social links
+    //social links and email address 
 
     $(socialIcon).hover(function() {
+        if (BTNstate) {
+            $(this).animate({
+                color: "#222222",
+
+            }, 200);
+        } else {
+            $(this).animate({
+                color: "white",
+            }, 300);
+        }
+        BTNstate = !BTNstate;
+    });
+
+    $(emailLink).hover(function() {
         if (BTNstate) {
             $(this).animate({
                 color: "#222222",

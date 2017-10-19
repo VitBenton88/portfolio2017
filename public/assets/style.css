@@ -382,6 +382,21 @@ nav {
     color: white;
 }
 
+#emailWrap {
+    margin: 0px auto 40px auto;
+    text-align: center;
+}
+
+#emailWrap i {
+    display: block;
+}
+
+#emailWrap a {
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+}
+
 /* CONTACT MODAL */
 
 
