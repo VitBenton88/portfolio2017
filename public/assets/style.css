@@ -269,7 +269,7 @@ nav {
 
 #chartWrap {
     padding-top: 5px;
-    min-height: 600px;
+    min-height: 500px;
 }
 
 .backend{
@@ -641,7 +641,7 @@ footer .fa {
 
     #chartWrap {
         padding-top: 5px;
-        min-height: 600px;
+        min-height: 500px;
     }
 
 }
