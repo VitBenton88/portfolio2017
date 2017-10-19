@@ -1,497 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Vit Benton</title>
+    <title>Vit Benton</title>
 </head>
-	<!--BOOTSTRAP CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<!--LOCAL CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/style.css">
-	<!--VIEWPORT -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!--GOOGLE FONT -->
-	<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
-	<!--FAVICON -->
-	<link rel="icon" type="image/png" href="assets/images/favicon-lightbulb-o.ico">
-	
+<!--BOOTSTRAP CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!--LOCAL CSS -->
+<link rel="stylesheet" type="text/css" href="assets/style.css">
+<!--VIEWPORT -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--GOOGLE FONT -->
+<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cabin" rel="stylesheet">
+<!--FAVICON -->
+<link rel="icon" type="image/png" href="assets/images/favicon-lightbulb-o.ico">
+
 <body data-spy="scroll" data-target=".navbar-collapse">
-	
-	<!-- /.loader animation -->
-	<div id="loaderWrap">
-		<div class="loader"></div>
-	</div>
-
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-	  <div class="container">
-
-	    <div class="navbar-header">
-
-	      <button id="mobileNavButton" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-
-	    </div>
-
-	    <!-- Collect the nav links, forms, and other content for toggling -->
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-	      <ul class="nav navbar-nav">
-	      	<li id="homeLink"><a class="navLink" href="#header">Home</a></li>
-	        <li><a class="navLink" href="#bio">About</a></li>
-	        <li><a class="navLink" href="#portfolio">Portfolio</a></li>
-	        <li><a class="navLink" href="#resume">Resume</a></li>
-	        <li><a class="navLink" href="#contact">Contact</a></li>
-	      </ul>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
-
-	<div class="container-fluid">
-
-			<div class="row" id="header">
-				<div class="col-lg-8 col-md-6 col-lg-offset-2 col-md-offset-3">
-					<h1><span>Hi, I'm Vit Benton</span></h1>
-
-					<p id="headerText">South Florida based full-stack web developer experienced with front-end and back-end developement.</p>
-
-					<div id="learnMore">
-
-						<a class="headerLinks navLink" href="#bio"><h3>Learn more about me</h3></a>
-
-						<a class="headerLinks navLink"  href="#bio"><i class="fa fa-chevron-down fa-3x" aria-hidden="true"></i></a>
-
-					</div>
-
-				</div>
-			</div>
-
-		<div class="row">
-
-			<div id="bio">
-				<h1 id="bioHeader"><span>About Me</span></h1>
-				<img id="faceShot" src="assets/images/compressed/selfieSquare_500.jpg">
-			</div>
-		</div>
-
-		<div class="row bioSection">
-
-			<div id="bioWrap">
-
-				<p>Full-stack web developer with a background in e-commerce, photography, and music production. Passionate about front-end design and skilled at back-end, database and server-side development. Comfortable working on a team or independently while meeting deadlines. Extensive experience in e-commerce and web design create a strong sense of how web applications can be effective.</p>
-
-			</div>
-
-		</div>
-
-		<div class="row">
-
-			<div class="parallax portParallax" id="portfolio">
-				<h1 id="portHeader"><span>Portfolio</span></h1>
-			</div>
-
-		</div>
-
-		<div class="row portfolioSection">
-
-			<div id="portfolioWrap">
-
-				<i class="fa fa-code fa-4x" aria-hidden="true"></i>
-
-				<p>I have developed web-applications using HTML5, CSS3, and JavaScript alongside a variety of frameworks and libraries. I am also experienced with back-end developement involving database and server-side code. Checkout some of the projects I have worked on and the technolgoy used to develop them:</p>
-
-				<div data-target="#simpsonsModal" class="col-lg-4 col-lg-offset-1 col-sm-4 portfolioIcons">
-
-					<h5><i>The Simpsons</i> Trivia Game</h5>
-
-					<img src="assets/images/simpsons_trivia.jpg">
-
-					<div class="overlay">
-						
-						<img class="tech" src="assets/images/html.png">
-
-						<img class="tech" src="assets/images/css.png">
-
-						<img class="tech" src="assets/images/js.png">
-
-						<img class="tech" src="assets/images/jQuery.jpg">
-
-					</div>
-					
-				</div>
-
-			<!-- Simpsons Modal -->
-			<div id="simpsonsModal" class="modal fade" role="dialog">
-			  <div class="modal-dialog modal-md">
-
-			    <!-- Modal Content-->
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal">&times;</button>
-			        <h4 class="modal-title"><i>The Simpsons</i> Trivia Game</h4>
-			      </div>
-			      <div class="modal-body">
-
-					<h4 class="projectTitle">Sole Developer & Designer</h4>
-
-					<hr>
-
-					<ul class="modalList">
-
-						<li>Trivia game using JavaScript for logic, jQuery to manipulate HTML, and CSS for styling.</li>
-
-						<li>Questions and timers are dynamically adding using logic in jQuery and Javascript.</li>
-
-					</ul>
-
-					<button onclick="location.href='https://vitbenton88.github.io/TriviaGame/'" type="button" class="btn expandBtn">View on GitHub Pages</button>
-
-			      </div>
-			   
-			    </div>
-
-			  </div>
-			</div>
-
-				<div data-target="#trainModal" class="col-lg-4 col-lg-offset-1 col-sm-4 portfolioIcons">
-
-					<h5>Train Scheduler</h5>
-
-					<img src="assets/images/trainScheduler.jpg">
-
-					<div class="overlay">
-						
-						<img class="tech" src="assets/images/bootstrap.png">
-
-						<img class="tech" src="assets/images/moment.png">
-
-						<img class="tech" src="assets/images/js.png">
-
-						<img class="tech" src="assets/images/firebase.png">
-						
-					</div>
-					
-				</div>
-
-			<!-- Train Modal -->
-			<div id="trainModal" class="modal fade" role="dialog">
-			  <div class="modal-dialog modal-md">
-
-			    <!-- Modal Content-->
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal">&times;</button>
-			        <h4 class="modal-title">Train Scheduler</h4>
-			      </div>
-			      <div class="modal-body">
-
-					<h4 class="projectTitle">Sole Developer & Designer</h4>
-
-					<hr>
-
-					<ul class="modalList">
-
-						<li>Train schedule application that incorporates Firebase to host arrival and departure data. Retrieves and manipulates time data with Moment.js. This app provides up-to-date information about various trains, their arrival times and how many minutes remain until arrival.</li>
-
-						<li>Trains are dynamically added and removed both in the browser and in Firebase by user input. Styling done using the Bootstrap library.</li>
-
-					</ul>
-
-					<button onclick="location.href='https://vitbenton88.github.io/TrainScheduler/'" type="button" class="btn expandBtn">View on GitHub Pages</button>
-
-			      </div>
-			   
-			    </div>
-
-			  </div>
-			</div>
-
-				<div data-target="#bamazonModal" class="col-lg-4 col-lg-offset-1 col-sm-4 portfolioIcons">
-
-					<h5>Bamazon</h5>
-
-					<img src="assets/images/bamazon.jpg">
-
-					<div class="overlay">
-						
-						<img class="tech" src="assets/images/nodeJS.png">
-
-						<img class="tech" src="assets/images/mysql.png">
-
-						<img class="tech" src="assets/images/js.png">
-						
-					</div>
-					
-				</div>
-
-			<!-- Bamazon Modal -->
-			<div id="bamazonModal" class="modal fade" role="dialog">
-			  <div class="modal-dialog modal-md">
-
-			    <!-- Modal Content-->
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal">&times;</button>
-			        <h4 class="modal-title">Bamazon</h4>
-			      </div>
-			      <div class="modal-body">
-
-					<h4 class="projectTitle">Sole Developer</h4>
-
-					<hr>
-
-					<ul class="modalList">
-
-						<li>Amazon-like storefront using Node.JS and a MySQL database. The app takes in orders and depletes stock from the store's inventory. In addition, the app provides the option of updating the MySQL database and issuing inventory reports.</li>
-
-						<li>This is a Node.JS app that incorporates a MySQL database and uses the MySQL, Inquirer, and Table Node modules.</li>
-
-					</ul>
-
-					<button onclick="location.href='https://github.com/VitBenton88/bamazon'" type="button" class="btn expandBtn">View on GitHub</button>
-
-			      </div>
-			   
-			    </div>
-
-			  </div>
-			</div>
-
-				<div data-target="#GifTasticModal" class="col-lg-4 col-lg-offset-1 col-sm-4 portfolioIcons">
-
-					<h5>GifTastic</h5>
-
-					<img src="https://media.giphy.com/media/v22gEBPOMWPsY/giphy.gif">
-
-					<div class="overlay">
-						
-							<img class="tech" src="assets/images/bootstrap.png">
-
-							<img class="tech" src="assets/images/html.png">
-
-							<img class="tech" src="assets/images/js.png">
-
-							<img class="tech" src="assets/images/ajax.png">
-						
-					</div>
-					
-				</div>
-
-			<!-- GifTastic Modal -->
-			<div id="GifTasticModal" class="modal fade" role="dialog">
-			  <div class="modal-dialog modal-md">
-
-			    <!-- Modal Content-->
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal">&times;</button>
-			        <h4 class="modal-title">GifTastic</h4>
-			      </div>
-			      <div class="modal-body">
-
-					<h4 class="projectTitle">Sole Developer & Designer</h4>
-
-					<hr>
-
-					<ul class="modalList">
-
-						<li>Using the GIPHY API, this dynamic web page populates with gifs of your choice.</li>
-
-						<li>With each button click, an AJAX cqall is made to retrieve gif locations and their corresponding ratings. Clicking ech thumbnail can toggle between a static and animated gif.</li>
-
-						<li>The app was developed using HTML5, CSS3, Javascript, jQuery, AJAX, and the Bootstrap framework.</li>
-
-					</ul>
-
-					<button onclick="location.href='https://vitbenton88.github.io/GifTastic/?'" type="button" class="btn expandBtn">View on GitHub Pages</button>
-
-			      </div>
-			   
-			    </div>
-
-			  </div>
-			</div>
-
-			</div>
-
-		</div>
-
-		<!-- Charts -->
-
-		<div class="row fixedHeightRow">
-
-			<div id="frontendChart">
-				<h2>Frontend Development</h2>
-				<div class="col-lg-8 col-lg-offset-2 col-md-9 col-md-offset-1">
-					<div id="chartWrap">
-						<canvas id="frontendCanvas"></canvas>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-		<div class="row backend fixedHeightRow">
-
-			<div id="backendChart">
-				<h2>Backend Development</h2>
-				<div class="col-lg-8 col-lg-offset-2 col-md-9 col-md-offset-1">
-					<div id="chartWrap">
-						<canvas id="backendCanvas"></canvas>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-		<div class="row resumeRow">
-
-			<div id="resume">
-				<div class="col-lg-8 col-lg-offset-2 col-md-9 col-md-offset-1">
-
-						<h2 id="resumeTitle">Resume</h2>
-
-						<br>
-
-						<h4>TECHNICAL SKILLS</h4>
-						<p>HTML5, CSS3, JavaScript, JQuery, Bootstrap, Responsive Design, Media Queries, APIs, JSON, Firebase, Node Js, MySQL, MongoDB, Express, Handlebars JS, React Js, GitHub, Heroku, Adobe Photoshop, Adobe Lightroom, and Microsoft Excel.</p>
-
-						<br>
-
-						<h4>EDUCATION</h4>
-						<span class="subHeader">University of Central Florida, Davie FL</span><span class="resumeDate">May 2017 - Present</span>
-						<p><i>Full Stack Web Development Certification</i></p>
-						<p id="navBlackToggle">An intensive 24-week long program dedicated to designing and building web applications. Skills learned consisted of HTML5, CSS3, JavaScript, JQuery, Bootstrap, Responsive Design, APIs, JSON, Firebase, Node Js, MySQL, MongoDB, Express, Handlebars JS, React Js, GitHub, and Heroku.</p>
-
-						<span class="subHeader">Florida Atlantic University, Boca Raton FL</span><span class="resumeDate">Aug 2009 - Dec 2011</span>
-						<p><i>Bachelor of Arts in English, Minor in Philosophy,</i>Cum Laude</p>
-
-						<span class="subHeader">Broward College, Coconut Creek FL</span><span class="resumeDate">Aug 2007 - July 2009</span>
-						<p><i>Associate of Arts in English</i></p>
-
-						<br>
-
-						<h4>RELEVANT WORK EXPERIENCE</h4>
-						<span class="subHeader">OutstandingEyewear.com,  Deerfield Beach, FL</span><span class="resumeTitle"> - Content Manager</span><span class="resumeDate">June 2012 - PRESENT</span>
-						<ul>
-							<li>Directly overlook all content and media posted to six individual websites including an Amazon store with over 6000 ratings.</li>
-							<li>Work closely with vendors and design team to accurately portray product and brand with proprietary media and in-house photography.</li>
-							<li>Oversee and produce all in-house photography including studio work and post-processing. Experienced with using lighting arrangements, camera/lens configurations, and backdrops.</li>
-							<li>Responsible for daily updates to stock levels and content, seamlessly across all online stores.</li>
-							<li>Solely worked on the Big Commerce e-commerce platform; responsibilities including but not limited to managing orders, customer accounts, SEO, web design, and inventory management.</li>
-							<li>Collaborated with SEO specialists with each individual online store in addition to optimizing URL structures and website layout.</li>
-						</ul>
-
-				</div>
-			</div>
-		</div>
-
-		<div class="row" id="contact">
-
-			<h1 id="contactHeader"><span>Get In Touch ...</span></h1>
-
-			<p id="contactIntro">I'm open to discuss freelance projects and job opportunities.</p>
-
-			<div>
-				<!-- Trigger the modal with a button -->
-				<button type="button" class="btn expandBtn" data-toggle="modal" data-target="#contactModal">Message Me</button>
-
-			</div>
-
-			<!-- Contact Modal -->
-			<div id="contactModal" class="modal fade" role="dialog">
-			  <div class="modal-dialog modal-lg">
-
-			    <!-- Modal Content-->
-			    <div class="modal-content">
-			      <div class="modal-header">
-			        <button type="button" class="close" data-dismiss="modal">&times;</button>
-			        <h4 class="modal-title">Contact</h4>
-			      </div>
-			      <div class="modal-body">
-
-			        <form id="contactForm" action = "/contact" method="POST" >
-
-						  <div class="form-group">
-						    <input placeholder="Name*" type="text" class="form-control" id="name" title="Your Name" required />
-						  </div>
-
-						  <div class="form-group">
-						    <input placeholder="Email*" type="email" class="form-control" id="email" title="Your Email Address" required />
-						  </div>
-
-						  <div class="form-group">
-						    <input placeholder="Message*" type="text" class="form-control" id="message" title="Your Message" required />
-						  </div>
-
-						  <button type="submit" class="btn expandBtn" id="sendButton" data-toggle="modal" data-target="#myModal">SEND</button>
-
-					</form>
-
-			      </div>
-			   
-			    </div>
-
-			  </div>
-			</div>
-
-			<div>
-				
-				<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
-
-					<div id="emailWrap">
-
-						<i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i>
-					
-						<a id="emailLink" href="mailto:Vit@vitbenton.com" target="_top">Vit@vitbenton.com</a>
-
-					</div>
-
-					<div id="social-links">
-
-						<a href="https://www.linkedin.com/in/vit-benton/"><i class="fa fa-4x fa-linkedin-square socialIcons" aria-hidden="true"></i></a>
-						<a href="https://github.com/VitBenton88"><i class="fa fa-4x fa-github socialIcons" aria-hidden="true"></i></a>
-						<a href="https://stackoverflow.com/users/8039195/vitek-benton?tab=profile"><i class="fa fa-4x fa-stack-overflow socialIcons" aria-hidden="true"></i></a>
-
-					</div>
-
-
-				</div>
-
-			</div>
-
-	</div>
-			
-
-	</div>
-
-	<footer>
-
-			<i class="fa fa-lightbulb-o fa-2x" aria-hidden="true"></i>
-			
-			<span>&copy;2017</span>
-
-	</footer>
-
-	<!--JQUERY -->
-	<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-	<!--JQUERY UI -->
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-	integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-	crossorigin="anonymous"></script>
-	<!--BOOTSTRAP CDN-->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-	<!--CHART.JS CDN -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-	<!--CHART JS -->
-	<script src="assets/chart.js"></script>
-	<!--EFFECTS JS -->
-	<script src="assets/effects.js"></script>
-	<!--FontAwesome CDN -->
-	<script src="https://use.fontawesome.com/9b29275b7b.js"></script>
-
+    <!-- /.loader animation -->
+    <div id="loaderWrap">
+        <div class="loader"></div>
+    </div>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button id="mobileNavButton" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li id="homeLink"><a class="navLink" href="#header">Home</a></li>
+                    <li><a class="navLink" href="#bio">About</a></li>
+                    <li><a class="navLink" href="#portfolio">Portfolio</a></li>
+                    <li><a class="navLink" href="#resume">Resume</a></li>
+                    <li><a class="navLink" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container-fluid">
+        <div class="row" id="header">
+            <div class="col-lg-8 col-md-6 col-lg-offset-2 col-md-offset-3">
+                <h1><span>Hi, I'm Vit Benton</span></h1>
+                <p id="headerText">South Florida based full-stack web developer experienced with front-end and back-end developement.</p>
+                <div id="learnMore">
+                    <a class="headerLinks navLink" href="#bio"><h3>Learn more about me</h3></a>
+                    <a class="headerLinks navLink" href="#bio"><i class="fa fa-chevron-down fa-3x" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div id="bio">
+                <h1 id="bioHeader"><span>About Me</span></h1>
+                <img id="faceShot" src="assets/images/compressed/selfieSquare_500.jpg">
+            </div>
+        </div>
+        <div class="row bioSection">
+            <div id="bioWrap">
+                <p>Full-stack web developer with a background in e-commerce, photography, and music production. Passionate about front-end design and skilled at back-end, database and server-side development. Comfortable working on a team or independently while meeting deadlines. Extensive experience in e-commerce and web design create a strong sense of how web applications can be effective.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="parallax portParallax" id="portfolio">
+                <h1 id="portHeader"><span>Portfolio</span></h1>
+            </div>
+        </div>
+        <div class="row portfolioSection">
+            <div id="portfolioWrap">
+                <i class="fa fa-code fa-4x" aria-hidden="true"></i>
+                <p>I have developed web-applications using HTML5, CSS3, and JavaScript alongside a variety of frameworks and libraries. I am also experienced with back-end developement involving database and server-side code. Checkout some of the projects I have worked on and the technolgoy used to develop them:</p>
+                <div data-target="#simpsonsModal" class="col-lg-4 col-lg-offset-1 col-sm-4 portfolioIcons">
+                    <h5><i>The Simpsons</i> Trivia Game</h5>
+                    <img src="assets/images/simpsons_trivia.jpg">
+                    <div class="overlay">
+                        <img class="tech" src="assets/images/html.png">
+                        <img class="tech" src="assets/images/css.png">
+                        <img class="tech" src="assets/images/js.png">
+                        <img class="tech" src="assets/images/jQuery.jpg">
+                    </div>
+                </div>
+                <!-- Simpsons Modal -->
+                <div id="simpsonsModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-md">
+                        <!-- Modal Content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title"><i>The Simpsons</i> Trivia Game</h4>
+                            </div>
+                            <div class="modal-body">
+                                <h4 class="projectTitle">Sole Developer & Designer</h4>
+                                <hr>
+                                <ul class="modalList">
+                                    <li>Trivia game using JavaScript for logic, jQuery to manipulate HTML, and CSS for styling.</li>
+                                    <li>Questions and timers are dynamically adding using logic in jQuery and Javascript.</li>
+                                </ul>
+                                <button onclick="location.href='https://vitbenton88.github.io/TriviaGame/'" type="button" class="btn expandBtn">View on GitHub Pages</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-target="#trainModal" class="col-lg-4 col-lg-offset-1 col-sm-4 portfolioIcons">
+                    <h5>Train Scheduler</h5>
+                    <img src="assets/images/trainScheduler.jpg">
+                    <div class="overlay">
+                        <img class="tech" src="assets/images/bootstrap.png">
+                        <img class="tech" src="assets/images/moment.png">
+                        <img class="tech" src="assets/images/js.png">
+                        <img class="tech" src="assets/images/firebase.png">
+                    </div>
+                </div>
+                <!-- Train Modal -->
+                <div id="trainModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-md">
+                        <!-- Modal Content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Train Scheduler</h4>
+                            </div>
+                            <div class="modal-body">
+                                <h4 class="projectTitle">Sole Developer & Designer</h4>
+                                <hr>
+                                <ul class="modalList">
+                                    <li>Train schedule application that incorporates Firebase to host arrival and departure data. Retrieves and manipulates time data with Moment.js. This app provides up-to-date information about various trains, their arrival times and how many minutes remain until arrival.</li>
+                                    <li>Trains are dynamically added and removed both in the browser and in Firebase by user input. Styling done using the Bootstrap library.</li>
+                                </ul>
+                                <button onclick="location.href='https://vitbenton88.github.io/TrainScheduler/'" type="button" class="btn expandBtn">View on GitHub Pages</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-target="#bamazonModal" class="col-lg-4 col-lg-offset-1 col-sm-4 portfolioIcons">
+                    <h5>Bamazon</h5>
+                    <img src="assets/images/bamazon.jpg">
+                    <div class="overlay">
+                        <img class="tech" src="assets/images/nodeJS.png">
+                        <img class="tech" src="assets/images/mysql.png">
+                        <img class="tech" src="assets/images/js.png">
+                    </div>
+                </div>
+                <!-- Bamazon Modal -->
+                <div id="bamazonModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-md">
+                        <!-- Modal Content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Bamazon</h4>
+                            </div>
+                            <div class="modal-body">
+                                <h4 class="projectTitle">Sole Developer</h4>
+                                <hr>
+                                <ul class="modalList">
+                                    <li>Amazon-like storefront using Node.JS and a MySQL database. The app takes in orders and depletes stock from the store's inventory. In addition, the app provides the option of updating the MySQL database and issuing inventory reports.</li>
+                                    <li>This is a Node.JS app that incorporates a MySQL database and uses the MySQL, Inquirer, and Table Node modules.</li>
+                                </ul>
+                                <button onclick="location.href='https://github.com/VitBenton88/bamazon'" type="button" class="btn expandBtn">View on GitHub</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div data-target="#GifTasticModal" class="col-lg-4 col-lg-offset-1 col-sm-4 portfolioIcons">
+                    <h5>GifTastic</h5>
+                    <img src="https://media.giphy.com/media/v22gEBPOMWPsY/giphy.gif">
+                    <div class="overlay">
+                        <img class="tech" src="assets/images/bootstrap.png">
+                        <img class="tech" src="assets/images/html.png">
+                        <img class="tech" src="assets/images/js.png">
+                        <img class="tech" src="assets/images/ajax.png">
+                    </div>
+                </div>
+                <!-- GifTastic Modal -->
+                <div id="GifTasticModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-md">
+                        <!-- Modal Content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">GifTastic</h4>
+                            </div>
+                            <div class="modal-body">
+                                <h4 class="projectTitle">Sole Developer & Designer</h4>
+                                <hr>
+                                <ul class="modalList">
+                                    <li>Using the GIPHY API, this dynamic web page populates with gifs of your choice.</li>
+                                    <li>With each button click, an AJAX cqall is made to retrieve gif locations and their corresponding ratings. Clicking ech thumbnail can toggle between a static and animated gif.</li>
+                                    <li>The app was developed using HTML5, CSS3, Javascript, jQuery, AJAX, and the Bootstrap framework.</li>
+                                </ul>
+                                <button onclick="location.href='https://vitbenton88.github.io/GifTastic/?'" type="button" class="btn expandBtn">View on GitHub Pages</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Charts -->
+        <div class="row fixedHeightRow">
+            <div id="frontendChart">
+                <h2>Frontend Development</h2>
+                <div class="col-lg-8 col-lg-offset-2 col-md-9 col-md-offset-1">
+                    <div id="chartWrap">
+                        <canvas id="frontendCanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row backend fixedHeightRow">
+            <div id="backendChart">
+                <h2>Backend Development</h2>
+                <div class="col-lg-8 col-lg-offset-2 col-md-9 col-md-offset-1">
+                    <div id="chartWrap">
+                        <canvas id="backendCanvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row resumeRow">
+            <div id="resume">
+                <div class="col-lg-8 col-lg-offset-2 col-md-9 col-md-offset-1">
+                    <h2 id="resumeTitle">Resume</h2>
+                    <br>
+                    <h4>TECHNICAL SKILLS</h4>
+                    <p>HTML5, CSS3, JavaScript, JQuery, Bootstrap, Responsive Design, Media Queries, APIs, JSON, Firebase, Node Js, MySQL, MongoDB, Express, Handlebars JS, React Js, GitHub, Heroku, Adobe Photoshop, Adobe Lightroom, and Microsoft Excel.</p>
+                    <br>
+                    <h4>EDUCATION</h4>
+                    <span class="subHeader">University of Central Florida, Davie FL</span><span class="resumeDate">May 2017 - Present</span>
+                    <p><i>Full Stack Web Development Certification</i></p>
+                    <p id="navBlackToggle">An intensive 24-week long program dedicated to designing and building web applications. Skills learned consisted of HTML5, CSS3, JavaScript, JQuery, Bootstrap, Responsive Design, APIs, JSON, Firebase, Node Js, MySQL, MongoDB, Express, Handlebars JS, React Js, GitHub, and Heroku.</p>
+                    <span class="subHeader">Florida Atlantic University, Boca Raton FL</span><span class="resumeDate">Aug 2009 - Dec 2011</span>
+                    <p><i>Bachelor of Arts in English, Minor in Philosophy,</i>Cum Laude</p>
+                    <span class="subHeader">Broward College, Coconut Creek FL</span><span class="resumeDate">Aug 2007 - July 2009</span>
+                    <p><i>Associate of Arts in English</i></p>
+                    <br>
+                    <h4>RELEVANT WORK EXPERIENCE</h4>
+                    <span class="subHeader">OutstandingEyewear.com,  Deerfield Beach, FL</span><span class="resumeTitle"> - Content Manager</span><span class="resumeDate">June 2012 - PRESENT</span>
+                    <ul>
+                        <li>Directly overlook all content and media posted to six individual websites including an Amazon store with over 6000 ratings.</li>
+                        <li>Work closely with vendors and design team to accurately portray product and brand with proprietary media and in-house photography.</li>
+                        <li>Oversee and produce all in-house photography including studio work and post-processing. Experienced with using lighting arrangements, camera/lens configurations, and backdrops.</li>
+                        <li>Responsible for daily updates to stock levels and content, seamlessly across all online stores.</li>
+                        <li>Solely worked on the Big Commerce e-commerce platform; responsibilities including but not limited to managing orders, customer accounts, SEO, web design, and inventory management.</li>
+                        <li>Collaborated with SEO specialists with each individual online store in addition to optimizing URL structures and website layout.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="contact">
+            <h1 id="contactHeader"><span>Get In Touch ...</span></h1>
+            <p id="contactIntro">I'm open to discuss freelance projects and job opportunities.</p>
+            <div>
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn expandBtn" data-toggle="modal" data-target="#contactModal">Message Me</button>
+            </div>
+            <!-- Contact Modal -->
+            <div id="contactModal" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg">
+                    <!-- Modal Content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Contact</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form id="contactForm" action="/contact" method="POST">
+                                <div class="form-group">
+                                    <input placeholder="Name*" type="text" class="form-control" id="name" title="Your Name" required />
+                                </div>
+                                <div class="form-group">
+                                    <input placeholder="Email*" type="email" class="form-control" id="email" title="Your Email Address" required />
+                                </div>
+                                <div class="form-group">
+                                    <input placeholder="Message*" type="text" class="form-control" id="message" title="Your Message" required />
+                                </div>
+                                <button type="submit" class="btn expandBtn" id="sendButton" data-toggle="modal" data-target="#myModal">SEND</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+                    <div id="emailWrap">
+                        <i class="fa fa-envelope-o fa-3x" aria-hidden="true"></i>
+                        <a id="emailLink" href="mailto:Vit@vitbenton.com" target="_top">Vit@vitbenton.com</a>
+                    </div>
+                    <div id="social-links">
+                        <a href="https://www.linkedin.com/in/vit-benton/"><i class="fa fa-4x fa-linkedin-square socialIcons" aria-hidden="true"></i></a>
+                        <a href="https://github.com/VitBenton88"><i class="fa fa-4x fa-github socialIcons" aria-hidden="true"></i></a>
+                        <a href="https://stackoverflow.com/users/8039195/vitek-benton?tab=profile"><i class="fa fa-4x fa-stack-overflow socialIcons" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <i class="fa fa-lightbulb-o fa-2x" aria-hidden="true"></i>
+        <span>&copy;2017</span>
+    </footer>
+    <!--JQUERY -->
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <!--JQUERY UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <!--BOOTSTRAP CDN-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <!--CHART.JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <!--CHART JS -->
+    <script src="assets/chart.js"></script>
+    <!--EFFECTS JS -->
+    <script src="assets/effects.js"></script>
+    <!--FontAwesome CDN -->
+    <script src="https://use.fontawesome.com/9b29275b7b.js"></script>
 </body>
+
 </html>
