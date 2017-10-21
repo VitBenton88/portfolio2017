@@ -27,7 +27,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // =============================================================
 
 // permit access to public file
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, '/public')));
 
 // homepage route
 app.get("/", function(req, res) {
