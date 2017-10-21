@@ -3,24 +3,25 @@ $(window).load(function() {
     // chart JS START --------------
     var htmlData = 70;
     var cssData = 70;
-    var bootsrapData = 40;
-    var jsData = 40;
+    var bootsrapData = 45;
+    var jsData = 50;
     var jqueryData = 50;
-    var respDes = 50;
+    var respDes = 55;
     var ajaxData = 50;
     var firebaseData = 30;
-    var mySQLdata = 30;
+    var mySQLdata = 35;
     var nodeData = 40;
-    var expressData = 30;
-    var handlebarsData = 30;
+    var expressData = 40;
+    var handlebarsData = 35;
+    var MongoDBData = 30;
     var photoshopData = 70;
 
-    var frontEndData = [htmlData, cssData, bootsrapData, jsData, jqueryData, photoshopData, respDes];
-    var backEndData = [ajaxData, firebaseData, mySQLdata, nodeData, expressData, handlebarsData];
+    var frontEndData = [htmlData, cssData, bootsrapData, jsData, jqueryData, respDes, photoshopData];
+    var backEndData = [ajaxData, nodeData, expressData, handlebarsData, firebaseData, mySQLdata, MongoDBData];
 
     var barChartOrientation = 'bar';
-    var frontendLabels = ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "Abode Photoshop", "Responsive Design"];
-    var backendLabels = ["AJAX", "Google Firebase", "mySQL", "Node.js", "Express.js", "Handlebars.js"];
+    var frontendLabels = ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "Responsive Design", "Abode Photoshop"];
+    var backendLabels = ["AJAX", "Node.js", "Express.js", "Handlebars.js", "Google Firebase", "mySQL", "MongoDB"];
     var ctxFrontend = $("#frontendCanvas");
     var ctxBackend = $("#backendCanvas");
     var chartOptions = {
@@ -105,6 +106,7 @@ $(window).load(function() {
                         'rgba(34, 34, 34, 0.8)',
                         'rgba(34, 34, 34, 0.8)',
                         'rgba(34, 34, 34, 0.8)',
+                        'rgba(34, 34, 34, 0.8)'
                     ],
                     borderColor: [
                         'rgba(0,0,0,1)',
@@ -114,6 +116,7 @@ $(window).load(function() {
                         'rgba(0,0,0,1)',
                         'rgba(0,0,0,1)',
                         'rgba(0,0,0,1)',
+                        'rgba(0,0,0,1)'
                     ],
                     borderWidth: 2
                 }]
