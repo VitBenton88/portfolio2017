@@ -5,6 +5,7 @@ $(window).load(function() {
     var cssData = 70;
     var bootsrapData = 45;
     var jsData = 50;
+    var reactData = 50;
     var jqueryData = 50;
     var respDes = 55;
     var ajaxData = 50;
@@ -16,11 +17,11 @@ $(window).load(function() {
     var MongoDBData = 30;
     var photoshopData = 70;
 
-    var frontEndData = [htmlData, cssData, bootsrapData, jsData, jqueryData, respDes, photoshopData];
+    var frontEndData = [htmlData, cssData, bootsrapData, jsData, jqueryData, reactData, respDes, photoshopData];
     var backEndData = [ajaxData, nodeData, expressData, handlebarsData, firebaseData, mySQLdata, MongoDBData];
 
     var barChartOrientation = 'bar';
-    var frontendLabels = ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "Responsive Design", "Abode Photoshop"];
+    var frontendLabels = ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "React.JS" "Responsive Design", "Abode Photoshop"];
     var backendLabels = ["AJAX", "Node.js", "Express.js", "Handlebars.js", "Google Firebase", "mySQL", "MongoDB"];
     var ctxFrontend = $("#frontendCanvas");
     var ctxBackend = $("#backendCanvas");
