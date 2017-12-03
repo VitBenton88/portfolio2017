@@ -21,7 +21,7 @@ $(window).load(function() {
     var backEndData = [ajaxData, nodeData, expressData, handlebarsData, firebaseData, mySQLdata, MongoDBData];
 
     var barChartOrientation = 'bar';
-    var frontendLabels = ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "React.JS" "Responsive Design", "Abode Photoshop"];
+    var frontendLabels = ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "React.JS", "Responsive Design", "Abode Photoshop"];
     var backendLabels = ["AJAX", "Node.js", "Express.js", "Handlebars.js", "Google Firebase", "mySQL", "MongoDB"];
     var ctxFrontend = $("#frontendCanvas");
     var ctxBackend = $("#backendCanvas");
@@ -75,8 +75,10 @@ $(window).load(function() {
                         'rgba(207, 99, 121, 0.4)',
                         'rgba(207, 99, 121, 0.4)',
                         'rgba(207, 99, 121, 0.4)',
+                        'rgba(207, 99, 121, 0.4)',
                     ],
                     borderColor: [
+                        'rgba(227,76,38,1)',
                         'rgba(227,76,38,1)',
                         'rgba(227,76,38,1)',
                         'rgba(227,76,38,1)',
