@@ -1,31 +1,31 @@
-$(window).load(function() {
+$(window).load(() => {
 
     // chart JS START --------------
-    var htmlData = 70;
-    var cssData = 70;
-    var bootsrapData = 45;
-    var jsData = 50;
-    var reactData = 50;
-    var jqueryData = 50;
-    var respDes = 55;
-    var ajaxData = 50;
-    var firebaseData = 30;
-    var mySQLdata = 35;
-    var nodeData = 40;
-    var expressData = 40;
-    var handlebarsData = 35;
-    var MongoDBData = 30;
-    var photoshopData = 70;
+    const htmlData = 70;
+    const cssData = 70;
+    const bootsrapData = 45;
+    const jsData = 50;
+    const reactData = 50;
+    const jqueryData = 50;
+    const respDes = 55;
+    const ajaxData = 50;
+    const firebaseData = 30;
+    const mySQLdata = 35;
+    const nodeData = 40;
+    const expressData = 40;
+    const handlebarsData = 35;
+    const MongoDBData = 30;
+    const photoshopData = 70;
 
-    var frontEndData = [htmlData, cssData, bootsrapData, jsData, jqueryData, reactData, respDes, photoshopData];
-    var backEndData = [ajaxData, nodeData, expressData, handlebarsData, firebaseData, mySQLdata, MongoDBData];
+    const frontEndData = [htmlData, cssData, bootsrapData, jsData, jqueryData, reactData, respDes, photoshopData];
+    const backEndData = [ajaxData, nodeData, expressData, handlebarsData, firebaseData, mySQLdata, MongoDBData];
 
-    var barChartOrientation = 'bar';
-    var frontendLabels = ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "React.JS", "Responsive Design", "Abode Photoshop"];
-    var backendLabels = ["AJAX", "Node.js", "Express.js", "Handlebars.js", "Google Firebase", "mySQL", "MongoDB"];
-    var ctxFrontend = $("#frontendCanvas");
-    var ctxBackend = $("#backendCanvas");
-    var chartOptions = {
+    const barChartOrientation = 'bar';
+    const frontendLabels = ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "React.JS", "Responsive Design", "Abode Photoshop"];
+    const backendLabels = ["AJAX", "Node.js", "Express.js", "Handlebars.js", "Google Firebase", "mySQL", "MongoDB"];
+    const ctxFrontend = $("#frontendCanvas");
+    const ctxBackend = $("#backendCanvas");
+    const chartOptions = {
         tooltips: {
             enabled: false
         },
@@ -60,33 +60,15 @@ $(window).load(function() {
     };
 
 
-    var myFrontendChart = function() { //created inside function to be able to called at scroll later
+    const myFrontendChart = () => { //created inside function to be able to called at scroll later
         new Chart(ctxFrontend, {
             type: barChartOrientation,
             data: {
                 labels: frontendLabels,
                 datasets: [{
                     data: frontEndData,
-                    backgroundColor: [
-                        'rgba(207, 99, 121, 0.4)',
-                        'rgba(207, 99, 121, 0.4)',
-                        'rgba(207, 99, 121, 0.4)',
-                        'rgba(207, 99, 121, 0.4)',
-                        'rgba(207, 99, 121, 0.4)',
-                        'rgba(207, 99, 121, 0.4)',
-                        'rgba(207, 99, 121, 0.4)',
-                        'rgba(207, 99, 121, 0.4)',
-                    ],
-                    borderColor: [
-                        'rgba(227,76,38,1)',
-                        'rgba(227,76,38,1)',
-                        'rgba(227,76,38,1)',
-                        'rgba(227,76,38,1)',
-                        'rgba(227,76,38,1)',
-                        'rgba(227,76,38,1)',
-                        'rgba(227,76,38,1)',
-                        'rgba(227,76,38,1)',
-                    ],
+                    backgroundColor: returnColorData('rgba(207, 99, 121, 0.4)', frontEndData.length),
+                    borderColor: returnColorData('rgba(227,76,38,1)', frontEndData.length),
                     borderWidth: 2
                 }]
             },
@@ -94,33 +76,15 @@ $(window).load(function() {
         });
     };
 
-    var myBackendChart = function() { //created inside function to be able to called at scroll later
+    const myBackendChart = () => { //created inside function to be able to called at scroll later
         new Chart(ctxBackend, {
             type: barChartOrientation,
             data: {
                 labels: backendLabels,
                 datasets: [{
                     data: backEndData,
-                    backgroundColor: [
-                        'rgba(34, 34, 34, 0.8)',
-                        'rgba(34, 34, 34, 0.8)',
-                        'rgba(34, 34, 34, 0.8)',
-                        'rgba(34, 34, 34, 0.8)',
-                        'rgba(34, 34, 34, 0.8)',
-                        'rgba(34, 34, 34, 0.8)',
-                        'rgba(34, 34, 34, 0.8)',
-                        'rgba(34, 34, 34, 0.8)'
-                    ],
-                    borderColor: [
-                        'rgba(0,0,0,1)',
-                        'rgba(0,0,0,1)',
-                        'rgba(0,0,0,1)',
-                        'rgba(0,0,0,1)',
-                        'rgba(0,0,0,1)',
-                        'rgba(0,0,0,1)',
-                        'rgba(0,0,0,1)',
-                        'rgba(0,0,0,1)'
-                    ],
+                    backgroundColor: returnColorData('rgba(34, 34, 34, 0.8)', backEndData.length),
+                    borderColor: returnColorData('rgba(0,0,0,1)', backEndData.length),
                     borderWidth: 2
                 }]
             },
@@ -130,21 +94,21 @@ $(window).load(function() {
 
     //code for loading graph at scroll
 
-    var backendInView = false;
-    var frontendInView = false;
+    let backendInView = false;
+    let frontendInView = false;
 
-    function isScrolledIntoView(elem) //function for determining if HTML element is scrolled into view
+    isScrolledIntoView = (elem) => //function for determining if HTML element is scrolled into view
     {
-        var docViewTop = $(window).scrollTop();
-        var docViewBottom = docViewTop + $(window).height();
+        const docViewTop = $(window).scrollTop();
+        const docViewBottom = docViewTop + $(window).height();
 
-        var elemTop = $(elem).offset().top;
-        var elemBottom = elemTop + $(elem).height();
+        const elemTop = $(elem).offset().top;
+        const elemBottom = elemTop + $(elem).height();
 
         return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
     }
 
-    $(window).scroll(function() { //load front-end chart when section is in viewport 
+    $(window).scroll( () => { //load front-end chart when section is in viewport 
         if (isScrolledIntoView($('#frontendCanvas'))) {
             if (frontendInView) {
                 return;
@@ -156,7 +120,7 @@ $(window).load(function() {
         }
     });
 
-    $(window).scroll(function() { //load back-end chart when section is in viewport 
+    $(window).scroll( () => { //load back-end chart when section is in viewport 
         if (isScrolledIntoView($('#backendCanvas'))) {
             if (backendInView) {
                 return;
@@ -167,6 +131,17 @@ $(window).load(function() {
             backendInView = false;
         }
     });
+
+    returnColorData = (String, Num) => {
+
+        const data = [];
+
+        for (let i = 0; i < Num; i++) {
+            data.push(String);
+        }
+
+        return data;
+    }
 
     //--------------------------------END OF code for loading graph at scroll
 

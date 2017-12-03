@@ -1,19 +1,19 @@
-$(window).load(function() {
+$(window).load( () => {
     $("#loaderWrap").fadeOut("slow");
 })
 
 
-$(document).ready(function() {
+$(document).ready( () => {
 
 
-    var windowWidth = $(window).width();
-    var windowHeight = $(window).height();
+    let windowWidth = $(window).width();
+    let windowHeight = $(window).height();
 
     // smoothScroll START --------------
 
-    var $root = $('html, body');
+    const $root = $('html, body');
 
-    $('.navLink').click(function() {
+    $('.navLink').click( function() {
         $root.animate({
             scrollTop: $($(this).attr('href')).offset().top
         }, 500);
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
     //hide nav bar after selection is made (on smaller screens):
 
-    $('.nav a').on('click', function() {
+    $('.nav a').on('click', () => {
         if (windowWidth < 599 || windowWidth < 750) { //less than mobile breakpoint, landscape & portrait
             $('.navbar-toggle').click();
         }
@@ -35,12 +35,12 @@ $(document).ready(function() {
 
     // nav color change on navButton click on mobile:
 
-    var navButton = $('#mobileNavButton');
-    var navLink = $('.navlink');
-    var navBarAll = $('.navbar-toggle, .navbar-collapse, .navbar, .collapse');
-    var navBar = $('.nav');
+    const navButton = $('#mobileNavButton');
+    const navLink = $('.navlink');
+    const navBarAll = $('.navbar-toggle, .navbar-collapse, .navbar, .collapse');
+    const navBar = $('.nav');
 
-    navButton.click(function() {
+    navButton.click( () => {
 
         if (navButton.hasClass('collapsed')) {
 
@@ -61,7 +61,7 @@ $(document).ready(function() {
 
     $('body').on('click', 'button', function() {
 
-        var currentAria = $(this).attr("aria-expanded");
+        const currentAria = $(this).attr("aria-expanded");
 
         if (currentAria == 'true') {
 
@@ -78,18 +78,18 @@ $(document).ready(function() {
 
     //on desktop, change navbar background color when home section is not active i.e. the view is not at the top of the page
 
-    var homeLI = $('#homeLink');
-    var active = '';
-    var userScrolled = false;
+    const homeLI = $('#homeLink');
+    let active = '';
+    let userScrolled = false;
 
-    $(window).scroll(function() {
+    $(window).scroll( () => {
 
         userScrolled = true;
         active = $('.active');
 
     });
 
-    setInterval(function() {
+    setInterval( () => {
 
         if (userScrolled) {
 
@@ -113,9 +113,9 @@ $(document).ready(function() {
 
     //on mobile, remove parallax, insert mobile styling (portfolio section)
 
-    var portSection = $('#portfolio');
-    var portHeader = $('#portHeader');
-    var portParallax = $('.portParallax');
+    const portSection = $('#portfolio');
+    const portHeader = $('#portHeader');
+    const portParallax = $('.portParallax');
 
     if (windowWidth < 1025) { //less than bootstrap's mobile breakpoint
         portSection.removeClass('portParallax');
@@ -135,17 +135,17 @@ $(document).ready(function() {
 
     //expandBtn button effects on portfolio and contact modal
 
-    var expandBtn = $('.expandBtn');
-    var sendBTN = $('#messageSend');
-    var socialIcon = $('.socialIcons');
-    var headerLinks = $('.headerLinks')
-    var emailLink = $('#emailLink')
-    var BTNstate = true;
+    const expandBtn = $('.expandBtn');
+    const sendBTN = $('#messageSend');
+    const socialIcon = $('.socialIcons');
+    const headerLinks = $('.headerLinks')
+    const emailLink = $('#emailLink')
+    let BTNstate = true;
 
     // Animate on hover
 
     //'learn more' header link that scrolls to bio section
-    $(headerLinks).hover(function() {
+    $(headerLinks).hover( function() {
         if (BTNstate) {
             $(this).animate({
                 color: "#9f6379"
@@ -160,7 +160,7 @@ $(document).ready(function() {
     });
 
     //message start button
-    $(expandBtn).hover(function() {
+    $(expandBtn).hover( function() {
 
         if (BTNstate) {
             $(this).animate({
@@ -208,7 +208,7 @@ $(document).ready(function() {
 
     });
     //send button
-    $(sendBTN).click(function() {
+    $(sendBTN).click( () => {
 
         $(this).animate({
             color: "white"
@@ -253,7 +253,7 @@ $(document).ready(function() {
 
     $('.portfolioIcons').click(function() {
 
-        var modalType = $(this).attr('data-target');
+        const modalType = $(this).attr('data-target');
 
         $(modalType).modal("show");
 
@@ -265,11 +265,11 @@ $(document).ready(function() {
 
     //function for clearing out contact form
 
-    function clearForm() {
+    clearForm = () => {
 
-        var contactForm = $('#contactForm');
+        const contactForm = $('#contactForm');
 
-        for (var i = 0; i < contactForm.length; i++) {
+        for (let i = 0; i < contactForm.length; i++) {
             contactForm[i].reset();
             $("#name").css('background-color', 'white');
             $("#email").css('background-color', 'white');
@@ -279,11 +279,11 @@ $(document).ready(function() {
 
     //function for displaying warning colors in form inputs that are empty
 
-    function formWarning() {
+    formWarning = () => {
 
-        var nameInput = $("#name").val().trim();
-        var emailInput = $("#email").val().trim();
-        var messageInput = $("#message").val().trim();
+        let nameInput = $("#name").val().trim();
+        let emailInput = $("#email").val().trim();
+        let messageInput = $("#message").val().trim();
 
         if (nameInput == '') {
             $("#name").css('background-color', '#ffe4b2');
@@ -300,11 +300,11 @@ $(document).ready(function() {
 
     // contact form validator function
 
-    function formVal() {
+    formVal = () => {
 
-        var nameInput = $("#name").val().trim();
-        var emailInput = $("#email").val().trim();
-        var messageInput = $("#message").val().trim();
+        let nameInput = $("#name").val().trim();
+        let emailInput = $("#email").val().trim();
+        let messageInput = $("#message").val().trim();
 
         if (nameInput == '' || emailInput == '' || messageInput == '') {
             formWarning();
@@ -318,28 +318,28 @@ $(document).ready(function() {
 
     //function for alerting when contact form is not properly filled out
 
-    function formAlert() {
+    formAlert = () => {
         alert(
 
-            'Message not sent. Please make sure the form is filled out correctly.\n\n' +
-            "\t• Make sure each field is filled.\n" +
-            '\t• Make sure the provided email is in the correct format:\n' +
-            '\t- e.g. example@example.com'
+            `Message not sent. Please make sure the form is filled out correctly.\n\n
+            \t• Make sure each field is filled.\n
+            \t• Make sure the provided email is in the correct format:\n
+            \t- e.g. example@example.com`
         );
     };
 
-    $("#sendButton").on("click", function() {
+    $("#sendButton").on("click", () => {
 
         event.preventDefault();
 
         if (formVal()) {
 
-            var contactForm = $('#contactForm');
-            var nameInput = $("#name").val().trim();
-            var emailInput = $("#email").val().trim();
-            var messageInput = $("#message").val().trim();
+            let contactForm = $('#contactForm');
+            let nameInput = $("#name").val().trim();
+            let emailInput = $("#email").val().trim();
+            let messageInput = $("#message").val().trim();
 
-            var newMessage = {
+            let newMessage = {
                 name: nameInput,
                 email: emailInput,
                 message: messageInput
@@ -347,7 +347,7 @@ $(document).ready(function() {
 
 
             $.post("/contact", newMessage)
-                .done(function(data) {
+                .done( (data) => {
                     if (data === true) {
                         alert("Thanks for contacting");
                         $('.close').click(); //close contact modal

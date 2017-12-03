@@ -1,12 +1,12 @@
 
 // Dependencies
 // =============================================================
-var dotenv = require('dotenv');
-var express = require("express");
-var bodyParser = require("body-parser");
-var nodemailer = require('nodemailer');
-var path = require("path");
-var validator = require('validator');//for contact form validation
+const dotenv = require('dotenv');
+const express = require("express");
+const bodyParser = require("body-parser");
+const nodemailer = require('nodemailer');
+const path = require("path");
+const validator = require('validator');//for contact form validation
 // var email = require('./email.env')
 
 //load environment variables
@@ -14,8 +14,8 @@ dotenv.config();
 
 // Sets up the Express App
 // =============================================================
-var app = express();
-var PORT = process.env.PORT || 3000;
+const app = express();
+let PORT = process.env.PORT || 3000;
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.json());
@@ -30,31 +30,31 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static(path.join(__dirname, '/public')));
 
 // homepage route
-app.get("/", function(req, res) {
+app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
 // redirect any route to homepage
-app.get("/*", function(req, res) {
+app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
 // Email
 // =============================================================
 
-app.post("/contact", function(req, res) {
+app.post("/contact", (req, res) => {
 
-	var sender = req.body.email;
-	var name = req.body.name;
-	var message = req.body.message;
+	let sender = req.body.email;
+	let name = req.body.name;
+	let message = req.body.message;
 
 	console.log(sender);
 
 	if (!validator.isEmpty(sender) && !validator.isEmpty(name) && !validator.isEmpty(message) && validator.isEmail(sender)) {
 
-		console.log("Email sent from: " + sender);
+		console.log(`Email sent from: ${sender}`);
 
-		var transporter = nodemailer.createTransport({
+		const transporter = nodemailer.createTransport({
 		  service: process.env.EMAIL_SER,
 		  auth: {
 		    user: process.env.EMAIL_USER,
@@ -62,19 +62,19 @@ app.post("/contact", function(req, res) {
 		  }
 		});
 
-		var mailOptions = {
+		const mailOptions = {
 		  from: process.env.EMAIL_USER,
 		  replyTo: sender,
 		  to: process.env.EMAIL_REC,
-		  subject: sender + " contacted you through VitBenton.com!",
+		  subject: `${sender} contacted you through VitBenton.com!`,
 		  text: message
 		};
 
-		transporter.sendMail(mailOptions, function(error, info){
+		transporter.sendMail(mailOptions, (error, info) => {
 		  if (error) {
 		    console.log(error);
 		  } else {
-		    console.log('Email sent: ' + info.response);
+		    console.log(`Email sent: ${info.response}`);
 		  }
 		});
 
@@ -88,6 +88,6 @@ app.post("/contact", function(req, res) {
 
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function() {
-  console.log("App listening on PORT " + PORT);
+app.listen(PORT, () => {
+  console.log(`App listening on PORT ${PORT}`);
 });
