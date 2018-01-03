@@ -1,10 +1,6 @@
-$(window).load( () => {
-    $("#loaderWrap").fadeOut("slow");
-})
-
-
 $(document).ready( () => {
 
+    $("#loaderWrap").fadeOut("slow");
 
     let windowWidth = $(window).width();
     let windowHeight = $(window).height();
@@ -13,7 +9,7 @@ $(document).ready( () => {
 
     const $root = $('html, body');
 
-    $('.navLink').click( function() {
+    $('.navLink').click(function() {
         $root.animate({
             scrollTop: $($(this).attr('href')).offset().top
         }, 500);
@@ -40,7 +36,7 @@ $(document).ready( () => {
     const navBarAll = $('.navbar-toggle, .navbar-collapse, .navbar, .collapse');
     const navBar = $('.nav');
 
-    navButton.click( () => {
+    navButton.click(() => {
 
         if (navButton.hasClass('collapsed')) {
 
@@ -82,14 +78,14 @@ $(document).ready( () => {
     let active = '';
     let userScrolled = false;
 
-    $(window).scroll( () => {
+    $(window).scroll(() => {
 
         userScrolled = true;
         active = $('.active');
 
     });
 
-    setInterval( () => {
+    setInterval(() => {
 
         if (userScrolled) {
 
@@ -145,7 +141,7 @@ $(document).ready( () => {
     // Animate on hover
 
     //'learn more' header link that scrolls to bio section
-    $(headerLinks).hover( function() {
+    $(headerLinks).hover(function() {
         if (BTNstate) {
             $(this).animate({
                 color: "#9f6379"
@@ -160,7 +156,7 @@ $(document).ready( () => {
     });
 
     //message start button
-    $(expandBtn).hover( function() {
+    $(expandBtn).hover(function() {
 
         if (BTNstate) {
             $(this).animate({
@@ -208,7 +204,7 @@ $(document).ready( () => {
 
     });
     //send button
-    $(sendBTN).click( () => {
+    $(sendBTN).click(() => {
 
         $(this).animate({
             color: "white"
@@ -347,7 +343,7 @@ $(document).ready( () => {
 
 
             $.post("/contact", newMessage)
-                .done( (data) => {
+                .done((data) => {
                     if (data === true) {
                         alert("Thanks for contacting");
                         $('.close').click(); //close contact modal
@@ -369,5 +365,5 @@ $(document).ready( () => {
 
     //--------------------------------
 
-    //----------------------------------------------------------------END OF SCRIPT	
+    //----------------------------------------------------------------END OF SCRIPT 
 });
