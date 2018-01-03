@@ -56,9 +56,8 @@ body {
     outline: none;
 }
 
-.fa-times {
+.closeIcon {
     display: none;
-    font-size: 20px;
 }
 
 nav {

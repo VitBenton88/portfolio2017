@@ -35,13 +35,13 @@ $(document).ready( () => {
     const navLink = $('.navlink');
     const navBarAll = $('.navbar-toggle, .navbar-collapse, .navbar, .collapse');
     const navBar = $('.nav');
-    const closeButton = $('.fa-times');
+    const closeButton = $('.closeIcon');
     const hamBurgerIcons= $('.icon-bar');
 
     navButton.click(() => {
 
         if (navButton.hasClass('collapsed')) {
-            closeButton.show('fast');
+            closeButton.show();
             hamBurgerIcons.hide();
             navBarAll.css('background-color', '#222');
             navBarAll.css('border-color', 'transparent');
