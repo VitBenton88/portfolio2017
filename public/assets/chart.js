@@ -20,7 +20,7 @@ $(window).load(() => {
     const frontEndData = [htmlData, cssData, bootsrapData, jsData, jqueryData, reactData, respDes, photoshopData];
     const backEndData = [ajaxData, nodeData, expressData, handlebarsData, firebaseData, mySQLdata, MongoDBData];
 
-    const barChartOrientation = 'bar';
+    let barChartOrientation = 'bar';
     const frontendLabels = ["HTML5", "CSS3", "Bootstrap", "Javascript", "jQuery", "React.JS", "Responsive Design", "Abode Photoshop"];
     const backendLabels = ["AJAX", "Node.js", "Express.js", "Handlebars.js", "Google Firebase", "mySQL", "MongoDB"];
     const ctxFrontend = $("#frontendCanvas");

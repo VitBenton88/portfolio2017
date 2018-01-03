@@ -35,15 +35,19 @@ $(document).ready( () => {
     const navLink = $('.navlink');
     const navBarAll = $('.navbar-toggle, .navbar-collapse, .navbar, .collapse');
     const navBar = $('.nav');
+    const closeButton = $('.fa-times');
+    const hamBurgerIcons= $('.icon-bar');
 
     navButton.click(() => {
 
         if (navButton.hasClass('collapsed')) {
-
+            closeButton.show('fast');
+            hamBurgerIcons.hide();
             navBarAll.css('background-color', '#222');
-            navBarAll.css('border-color', '#080808');
+            navBarAll.css('border-color', 'transparent');
         } else {
-
+            closeButton.hide();
+            hamBurgerIcons.show();
             navBarAll.css('background-color', 'transparent');
             navBarAll.css('border-color', '#d8d8d8');
 
