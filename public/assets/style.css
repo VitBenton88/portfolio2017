@@ -538,6 +538,10 @@ footer .fa {
         margin: 20px auto 20px auto;
     }
 
+    #portHeader {
+        padding-bottom: 65px !important;
+    }
+
     .portfolioIcons {
         margin-bottom: 0px;
     }
