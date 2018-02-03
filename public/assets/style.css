@@ -354,7 +354,7 @@ nav {
 
 #contactIntro {
     font-size: 18px;
-    text-decoration-line: line-through;
+    text-decoration: line-through;
 }
 
 .expandBtn {
