@@ -369,5 +369,11 @@ $(document).ready( () => {
 
     //--------------------------------
 
+    //insert current year into copyright text (in footer)
+
+    const copyright = $('#copyright'); 
+    const currentYear = (new Date()).getFullYear();
+    copyright.html(`&copy; ${currentYear}`)
+
     //----------------------------------------------------------------END OF SCRIPT 
 });
