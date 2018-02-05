@@ -8,20 +8,24 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 
-//gulp variables
-const src = 'public/assets';
+//paths
+const paths = {
+	src: 'public/assets',
+	scripts: 'src/js/*.js',
+	sass: 'src/sass/*.scss',
+};
 
 // gulp.tasks
 
 // minify & concat js
-gulp.task('minify-concat-js', (cb) => {
+gulp.task('scripts', (cb) => {
      pump([
-     	gulp.src('src/js/*.js'),
+     	gulp.src(paths.scripts),
      	sourcemaps.init(),
-	    concat('main.js'),
+	    concat('all.min.js'),
 	   	uglifyjs(),
-	   	sourcemaps.write(src),
-	    gulp.dest(src)
+	   	sourcemaps.write(paths.src),
+	    gulp.dest(paths.src)
 	  ],
 	  cb
 	);
@@ -34,15 +38,17 @@ gulp.task('sass', () => {
 		.pipe(autoprefixer())
 		.pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
 		.pipe(concat('style.css'))
-	.pipe(sourcemaps.write(src))
-	.pipe(gulp.dest(src));
+	.pipe(sourcemaps.write(paths.src))
+	.pipe(gulp.dest(paths.src));
 })
-
-//define default gulp task
-gulp.task('default', ['minify-concat-js', 'sass']);
 
 //define watch gulp task
 gulp.task('watch', () => {
 	//watch for changes in js
-	gulp.watch('src/js/*.js', ['minify-concat-js', 'sass']);
+	gulp.watch(paths.scripts, ['scripts']);
+	//watch for changes in sass
+	gulp.watch(paths.sass, ['sass']);
 });
+
+//define default gulp task
+gulp.task('default', ['scripts', 'sass']);
