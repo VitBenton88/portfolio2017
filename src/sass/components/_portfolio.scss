@@ -1,0 +1,184 @@
+/* PORTFOLIO */
+.portParallax {
+  /* The image used */
+  background-image: url("images/compressed/dino2.jpg");
+  /* Full height & width */
+  height: 100%;
+  width: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+  #portHeader {
+    background: linear-gradient(to right, rgba(255, 0, 0, 0), $main-flat-red);
+    text-align: center;
+    color: $white;
+    padding: 200px 0;
+    margin: 0;
+      @include mobile-portrait-max {
+        padding-bottom: 65px !important;
+      }
+    }
+
+.portfolioSection {
+  background: -webkit-linear-gradient(top left, $main-flat-red, $main-bright-red);
+  background: -o-linear-gradient(top left, $main-flat-red, $main-bright-red);
+  background: linear-gradient(to bottom right, $main-flat-red, $main-bright-red);
+  height: auto;
+
+  @include mobile-portrait-max {
+    padding-bottom: 20px;
+  }
+
+  #portfolioWrap {
+    padding: 20px 60px 60px;
+    color: #f2f2f2;
+    font-size: 18px;
+    max-width: 1020px;
+    text-align: center;
+    margin: auto;
+
+    #projectsWrap {
+      margin-left: 75px;
+      @include tablet-portrait-min {
+        margin-left: 50px;
+      }
+      @include mobile-portrait-max {
+        margin-left: 0;
+        margin-bottom: 20px;
+      }
+    }
+
+    .fa-code {
+      margin-bottom: 20px;
+    }
+
+    .portfolioIcons {
+      background: none;
+      border: 1px solid $main-grey;
+      border-radius: 15px;
+      height: auto;
+      padding-bottom: 10px;
+      margin-bottom: 50px;
+      margin-top: 20px;
+      text-align: center;
+      color: $white;
+      cursor: pointer;
+
+      &:hover {
+        .overlay {
+          opacity: 1;
+        }
+      }
+      @include mobile-portrait-max {
+        margin-bottom: 0;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: $main-grey;
+        border-radius: 15px;
+        padding: 60px 5px 5px;
+        cursor: pointer;
+
+        .tech {
+          width: 100px;
+          height: auto;
+          display: inline-block;
+          padding: 10px;
+          @include tablet-portrait-min {
+            width: 75px;
+          }
+        }
+      }
+    }
+
+    .modal-backdrop {
+        /* bug fix - no overlay */
+        display: none;
+    }
+
+    .modal-title {
+        font-size: 32px;
+        color: $main-pink-red;
+    }
+
+    .close {
+        float: right;
+        font-size: 45px;
+        font-weight: 700;
+        line-height: 1;
+        color: $white;
+        text-shadow: 0 1px 0 $white;
+        filter: alpha(opacity=20);
+        opacity: .6;
+        transition: 0.5s ease;
+
+        &:hover {
+          opacity: 1.0;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .modal-content {
+        background-color: $main-dark-grey;
+        text-align: center;
+        color: $white;
+    }
+
+    .modal-header {
+        padding: 15px;
+        border-bottom: 0px solid $light-grey;
+    }
+
+    .expandBtn {
+        border-color: $white;
+        border-radius: 8px;
+        background: none;
+        margin: 40px auto;
+        display: block;
+        width: auto;
+        height: 80px;
+        font-size: 24px;
+        min-width: 260px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    #GifTasticModal,
+    #guitarKeyModal,
+    #simpsonsModal,
+    #trainModal {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .projectTitle {
+      color: #a3a3a3;
+    }
+
+    .modalList {
+      font-size: 16px;
+    }
+  }
+}

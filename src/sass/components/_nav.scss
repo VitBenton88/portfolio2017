@@ -1,0 +1,125 @@
+/* NAVBAR */
+.navbar {
+  color: $white;
+
+  .navbar-nav {
+    display: inline-block;
+    float: none;
+
+    .active > a,
+    .active > a:focus,
+    .active > a:hover {
+      background-color: transparent;
+    }
+
+    li {
+      @include mobile-portrait-max {
+        margin-bottom: 20px;
+      }
+      @include mobile-landscape-min {
+        margin-bottom: 15px;
+      }
+      @include tablet-landscape-min {
+        margin-bottom: -5px;
+      }
+
+      a {
+        &:focus,
+        &:hover {
+          color: $dark-grey;
+        }
+      }
+    }
+  }
+
+  .navbar-collapse {
+    text-align: center;
+    box-shadow: none;
+    border-top: none;
+    font-size: 16px;
+    @include mobile-portrait-max {
+      font-size: 24px;
+    }
+    @include mobile-landscape-min {
+      font-size: 20px;
+    }
+    @include tablet-landscape-min {
+      font-size: 16px;
+    }
+  }
+
+  .navbar-toggle {
+    outline: none;
+  }
+
+  .closeIcon {
+    display: none;
+  }
+
+  .active {
+    border-bottom: 2px solid $white;
+  }
+}
+
+.navbar-inverse {
+  background: none;
+  border: none;
+
+  .navbar-toggle {
+    &:focus,
+    &:hover {
+      background-color: transparent;
+      @include mobile-landscape-min {
+        background-color: transparent;
+      }
+    }
+    @include mobile-portrait-max {
+      border-color: $light-grey;
+    }
+    @include mobile-landscape-min {
+      border-color: $light-grey;
+    }
+
+    .icon-bar {
+      @include mobile-portrait-max {
+        background-color: $light-grey;
+      }
+      @include mobile-landscape-min {
+        border-color: $light-grey;
+      }
+    }
+  }
+}
+
+.opaqueNav {
+  background-color: $off-black;
+}
+
+.navbar-fixed-bottom .navbar-collapse,
+.navbar-fixed-top .navbar-collapse {
+  @include mobile-landscape-min {
+    max-height: 100vh;
+  }
+}
+@include tablet-portrait-min {
+  .navbar .navbar-collapse {
+    font-size: 16px;
+  }
+
+  .navbar-nav > li {
+    margin-bottom: -5px;
+  }
+}
+@include desktop-min {
+  .navbar .navbar-collapse {
+    font-size: 16px;
+  }
+
+  .navbar-nav > li {
+    margin-bottom: -5px;
+  }
+
+  #headerText {
+    margin-bottom: 500px;
+  }
+}

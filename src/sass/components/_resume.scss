@@ -1,0 +1,51 @@
+/* RESUME */
+.resumeRow {
+  background-color: $white;
+
+  #resume {
+    font-size: 16px;
+    text-align: left;
+    padding-top: 50px;
+    margin-top: 2px;
+    @include mobile-portrait-max {
+      padding-top: 10px;
+    }
+    @include mobile-landscape-min {
+      padding-top: 5px;
+    }
+    @include tablet-portrait-min {
+      padding-top: 50px;
+    }
+    @include tablet-landscape-min {
+      padding-top: 50px;
+    }
+    @include desktop-min {
+      padding-top: 50px;
+    }
+
+    h4 {
+      font-weight: bold;
+      font-family: $header-fonts;
+      color: $main-flat-red;
+    }
+
+    #resumeTitle {
+      text-align: center;
+      color: $off-black;
+    }
+
+    .resumeDate {
+      float: right;
+      color: #A0A0A0;
+    }
+
+    .resumeTitle {
+      color: #A0A0A0;
+    }
+
+    .subHeader {
+      font-weight: 900;
+      text-shadow: 1px 0 black;
+    }
+  }
+}

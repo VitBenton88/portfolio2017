@@ -1,0 +1,62 @@
+/* BIO */
+#bio {
+  text-align: center;
+  padding-top: 50px;
+  @include mobile-portrait-max {
+    padding-top: 20px;
+  }
+
+  #bioHeader {
+    color: $white;
+    margin: 0;
+  }
+
+  #faceShot {
+    @include mobile-portrait-max {
+      border-radius: 50%;
+      max-width: 200px;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+    @include mobile-landscape-min {
+      border-radius: 50%;
+      max-width: 200px;
+      height: auto;
+      display: block;
+      margin: 20px auto;
+    }
+    @include tablet-portrait-min {
+      border-radius: 50%;
+      max-width: 300px;
+      height: auto;
+      display: block;
+      margin: 40px auto;
+    }
+    @include desktop-min {
+      border-radius: 50%;
+      max-width: 300px;
+      height: auto;
+      display: block;
+      margin: 40px auto;
+    }
+  }
+}
+
+.bioSection {
+  background: -webkit-linear-gradient(top left, $main-grey, $main-flat-red);
+  background: -o-linear-gradient(top left, $main-grey, $main-flat-red);
+  background: linear-gradient(to bottom right, $main-grey, $main-flat-red);
+
+  #bioWrap {
+    padding: 60px;
+    color: $grey;
+    font-size: 18px;
+    max-width: 1020px;
+    margin: auto;
+
+    p {
+      text-align: center;
+    }
+  }
+}

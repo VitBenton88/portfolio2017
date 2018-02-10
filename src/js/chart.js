@@ -108,7 +108,7 @@ $(window).load( () => {
         return ((elemTop <= docViewBottom) && (elemBottom >= docViewTop));
     }
 
-    $(window).scroll( () => { //load front-end chart when section is in viewport 
+    $(window).scroll( () => { //load front-end chart when section is in viewport
         if (isScrolledIntoView($('#frontendCanvas'))) {
             if (frontendInView) {
                 return;
@@ -120,7 +120,7 @@ $(window).load( () => {
         }
     });
 
-    $(window).scroll( () => { //load back-end chart when section is in viewport 
+    $(window).scroll( () => { //load back-end chart when section is in viewport
         if (isScrolledIntoView($('#backendCanvas'))) {
             if (backendInView) {
                 return;
@@ -145,5 +145,5 @@ $(window).load( () => {
 
     //--------------------------------END OF code for loading graph at scroll
 
-    //----------------------------------------------------------------END OF .load SCRIPT	
+    //----------------------------------------------------------------END OF .load SCRIPT
 });

@@ -1,0 +1,48 @@
+/* CHARTS */
+.fixedHeightRow {
+  @include mobile-portrait-max {
+    min-height: 200px;
+  }
+  @include mobile-landscape-min {
+    min-height: 350px;
+  }
+  @include tablet-portrait-min {
+    min-height: 350px;
+  }
+  @include tablet-landscape-min {
+    min-height: 580px;
+  }
+}
+
+#frontendChart {
+  background-color: $off-black;
+  text-align: center;
+  color: $grey;
+}
+
+#backendChart {
+  text-align: center;
+  color: $off-black;
+}
+
+#chartWrap {
+  padding-top: 5px;
+  min-height: 500px;
+  @include mobile-portrait-max {
+    min-height: 200px;
+  }
+  @include mobile-landscape-min {
+    min-height: 350px;
+  }
+  @include tablet-portrait-min {
+    min-height: 350px;
+  }
+  @include desktop-min {
+    padding-top: 5px;
+    min-height: 500px;
+  }
+}
+
+.backend {
+  background-color: $main-bright-red;
+}

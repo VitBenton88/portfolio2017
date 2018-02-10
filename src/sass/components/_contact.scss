@@ -1,0 +1,143 @@
+/* CONTACT */
+#contact {
+  background: -webkit-linear-gradient(top left, $main-flat-red, $main-grey);
+  background: -o-linear-gradient(top left, $main-flat-red, $main-grey);
+  background: linear-gradient(to bottom right, $main-flat-red, $main-grey);
+  padding: 50px 0;
+  color: $white;
+  text-align: center;
+
+  #contactHeader {
+    font-family: $header-fonts;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  #contactIntro {
+    font-size: 18px;
+    text-decoration: line-through;
+  }
+
+  .expandBtn {
+    border-color: $white;
+    border-radius: 8px;
+    background: none;
+    margin: 40px auto;
+    display: block;
+    width: auto;
+    height: 80px;
+    font-size: 24px;
+    min-width:260px;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  #messageSend {
+    border-color: $white;
+    border-radius: 8px;
+    background: none;
+    margin: 40px auto;
+    display: block;
+    width: 200px;
+    height: 60px;
+    font-size: 24px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  #social-links {
+    margin: 10px auto 40px;
+    display: block;
+    width: 300px;
+    text-align: center;
+     a {
+       color: transparent;
+     }
+  }
+
+  .socialIcons {
+    display: inline;
+    margin-left: 0.2em;
+    color: $white;
+    &:visited {
+      text-decoration: none;
+    }
+  }
+
+  #emailWrap {
+    margin: 0 auto 40px;
+    text-align: center;
+
+    i {
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: $white;
+      font-size: 28px;
+    }
+  }
+  /* CONTACT MODAL */
+  .modal-backdrop {
+    /* bug fix - no overlay */
+    display: none;
+  }
+
+  #contactModal {
+    background: rgba(0, 0, 0, 0.6);
+
+    .modal-title {
+      font-size: 32px;
+      color: #cf6379;
+    }
+
+    .modal-content {
+      background-color: #2c4554;
+      text-align: center;
+      color: $white;
+
+      .modal-header {
+        padding: 15px;
+        border-bottom: 0 solid #e5e5e5;
+
+        .close {
+          float: right;
+          font-size: 45px;
+          font-weight: 700;
+          line-height: 1;
+          color: $white;
+          text-shadow: 0 1px 0 #fff;
+          filter: alpha(opacity=20);
+          opacity: 0.6;
+          outline: none;
+          transition: 0.5s ease;
+
+          &:hover {
+            opacity: 1.0;
+          }
+        }
+      }
+
+      form {
+        width: 50%;
+        margin: auto;
+        @include mobile-portrait-max {
+          width: 100%;
+        }
+        @include tablet-landscape-min {
+          width: 100%;
+        }
+      }
+
+      #message {
+        padding: 20px 10px 200px;
+        line-height: 28px;
+      }
+    }
+  }
+}

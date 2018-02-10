@@ -2,8 +2,10 @@
 My personal webpage
 built using:
 
+* Gulp.js
 * HTML5
 * CSS3
+* SASS
 * JavaScript
 * jQuery
 * jQuery UI

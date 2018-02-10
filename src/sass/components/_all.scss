@@ -1,0 +1,193 @@
+/*MEDIA QUERIES*/
+/*!!IMPORTANT some responsize layout done in effects.js*/
+@media (max-width: 599px) {
+  /*phone only-portrait*/
+  .navbar-inverse .navbar-toggle {
+    border-color: $light-grey;
+  }
+
+  .navbar-inverse .navbar-toggle .icon-bar {
+    background-color: $light-grey;
+  }
+
+  .navbar-inverse .navbar-toggle:focus,
+  .navbar-inverse .navbar-toggle:hover {
+    background-color: transparent;
+  }
+
+  .navbar .navbar-collapse {
+    font-size: 24px;
+  }
+
+  .navbar-nav > li {
+    margin-bottom: 20px;
+  }
+
+  #headerText {
+    margin-bottom: 206px;
+  }
+
+  #bio {
+    text-align: center;
+    padding-top: 20px;
+  }
+
+  #bioHeader {
+    color: $white;
+    margin: 0;
+  }
+
+  #faceShot {
+    border-radius: 50%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+  }
+
+  #portHeader {
+    padding-bottom: 65px !important;
+  }
+
+  .portfolioIcons {
+    margin-bottom: 0;
+  }
+
+  #chartWrap,
+  .fixedHeightRow {
+    min-height: 200px;
+  }
+
+  #resume {
+    padding-top: 10px;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+@media (min-width: 600px) {
+  /*phone landscape & up*/
+  .navbar-inverse .navbar-toggle {
+    border-color: $light-grey;
+  }
+
+  .navbar-inverse .navbar-toggle .icon-bar {
+    background-color: $light-grey;
+  }
+
+  .navbar-inverse .navbar-toggle:focus,
+  .navbar-inverse .navbar-toggle:hover {
+    background-color: transparent;
+  }
+
+  .navbar-nav > li {
+    margin-bottom: -5px;
+  }
+
+  .navbar .navbar-collapse {
+    font-size: 20px;
+  }
+
+  .navbar-nav > li {
+    margin-bottom: 15px;
+  }
+
+  #headerText {
+    margin-bottom: 70px;
+  }
+
+  #faceShot {
+    border-radius: 50%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+  }
+
+  #chartWrap,
+  .fixedHeightRow {
+    min-height: 350px;
+  }
+
+  #resume {
+    padding-top: 5px;
+  }
+
+  .navbar-fixed-bottom .navbar-collapse,
+  .navbar-fixed-top .navbar-collapse {
+    max-height: 100vh;
+  }
+}
+@media (min-width: 750px) {
+  /*tablet-portrait*/
+  .navbar .navbar-collapse {
+    font-size: 16px;
+  }
+
+  .navbar-nav > li {
+    margin-bottom: -5px;
+  }
+
+  #faceShot {
+    border-radius: 50%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 40px auto;
+  }
+
+  #resume {
+    padding-top: 50px;
+  }
+
+  #chartWrap,
+  .fixedHeightRow {
+    min-height: 350px;
+  }
+
+  form {
+    width: 100%;
+  }
+}
+@media (min-width: 900px) {
+  /*tablet-landscape & up*/
+  .navbar .navbar-collapse {
+    font-size: 16px;
+  }
+
+  .navbar-nav > li {
+    margin-bottom: -5px;
+  }
+
+  #resume {
+    padding-top: 50px;
+  }
+
+  .fixedHeightRow {
+    min-height: 580px;
+  }
+}
+@media (min-width: 1200px) {
+  /*desktop & up*/
+  .navbar .navbar-collapse {
+    font-size: 16px;
+  }
+
+  .navbar-nav > li {
+    margin-bottom: -5px;
+  }
+
+  #headerText {
+    margin-bottom: 500px;
+  }
+
+  #resume {
+    padding-top: 50px;
+  }
+
+  #chartWrap {
+    padding-top: 5px;
+    min-height: 500px;
+  }
+}

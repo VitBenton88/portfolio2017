@@ -1,0 +1,37 @@
+/* breakpoints */
+$mobile-portrait-max: "599px";/*phone only-portrait*/
+$mobile-landscape-min: "600px";/*phone landscape & up*/
+$tablet-portrait-min: "750px";/*tablet-portrait*/
+$tablet-landscape-min: "900px";/*tablet-landscape & up*/
+$desktop-min: "1200px";/*desktop & up*/
+
+/* media query mixins */
+@mixin mobile-portrait-max {
+  @media (max-width: #{$mobile-portrait-max}) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin mobile-landscape-min {
+  @media (min-width: #{$mobile-landscape-min}) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait-min {
+  @media (min-width: #{$tablet-portrait-min}) and (orientation: portrait) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape-min {
+  @media (min-width: #{$tablet-landscape-min}) and (orientation: landscape) {
+    @content;
+  }
+}
+
+@mixin desktop-min {
+  @media (min-width: #{$desktop-min}) {
+    @content;
+  }
+}
