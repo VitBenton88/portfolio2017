@@ -14,7 +14,8 @@ const paths = {
   root: '/',
   src: 'public/assets',
   scripts: 'src/js/*.js',
-  sass: 'src/sass/**/*.scss'
+  sass: 'src/sass/**/*.scss',
+  sassSrc: 'src/sass/style.scss'
 };
 
 // gulp.tasks
@@ -35,7 +36,7 @@ gulp.task('scripts', (cb) => {
 
 //compile sass
 gulp.task('sass', () => {
-  gulp.src('src/sass/style.scss')
+  gulp.src(paths.sassSrc)
     .pipe(sourcemaps.init())
     .pipe(autoprefixer())
     .pipe(sass({
