@@ -46,7 +46,7 @@ $(document).ready(() => {
         role: "Sole Developer & Designer",
         bullets: ["User friendly song writing assistant that uses basic musical keys to help users develop their musical acumen. The Guitar Key was developed to be used with a six string guitar. The Guitar Key will also leverage APIs to provide songs to learn alongside the respective key and to provide chord shapes for each chord in the key.", "This is a React JS app that incorporates a MongoDB database with Mongoose and Passport.js with Bcrypt for user authentication."],
         url: "https://nameless-castle-57970.herokuapp.com/",
-        urlText: "View on GitHub Heroku"
+        urlText: "View on Heroku"
       },
       {
         id: "GifTasticModal",
