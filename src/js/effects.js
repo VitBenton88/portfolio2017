@@ -36,7 +36,7 @@ $(document).ready(() => {
   const navBarAll = $('.navbar-toggle, .navbar-collapse, .navbar, .collapse');
   const navBar = $('.nav');
   const closeButton = $('.closeIcon');
-  const hamBurgerIcons = $('.icon-bar');
+  const hamBurgerIcons = $('.fa-bars');
 
   navButton.click(() => {
 

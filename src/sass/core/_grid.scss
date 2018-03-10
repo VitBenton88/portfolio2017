@@ -1,4 +1,5 @@
 /* breakpoints */
+$mobile-max: "768px";/*phone only-portrait*/
 $mobile-portrait-max: "599px";/*phone only-portrait*/
 $mobile-landscape-min: "600px";/*phone landscape & up*/
 $tablet-portrait-min: "750px";/*tablet-portrait*/
@@ -6,6 +7,12 @@ $tablet-landscape-min: "900px";/*tablet-landscape & up*/
 $desktop-min: "1200px";/*desktop & up*/
 
 /* media query mixins */
+@mixin mobile-max {
+  @media (max-width: #{$mobile-max}) {
+    @content;
+  }
+}
+
 @mixin mobile-portrait-max {
   @media (max-width: #{$mobile-portrait-max}) and (orientation: portrait) {
     @content;

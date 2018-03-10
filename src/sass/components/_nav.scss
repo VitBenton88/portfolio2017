@@ -50,6 +50,7 @@
 
   .navbar-toggle {
     outline: none;
+    border: none;
   }
 
   .closeIcon {
@@ -69,24 +70,16 @@
     &:focus,
     &:hover {
       background-color: transparent;
+
       @include mobile-landscape-min {
         background-color: transparent;
       }
     }
     @include mobile-portrait-max {
-      border-color: $light-grey;
+      color: $light-grey;
     }
     @include mobile-landscape-min {
-      border-color: $light-grey;
-    }
-
-    .icon-bar {
-      @include mobile-portrait-max {
-        background-color: $light-grey;
-      }
-      @include mobile-landscape-min {
-        border-color: $light-grey;
-      }
+      color: $light-grey;
     }
   }
 }
