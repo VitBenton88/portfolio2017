@@ -47,15 +47,12 @@ app.get("/*", (req, res) => {
 
 app.post("/contact", (req, res) => {
 
-  let sender = req.body.email;
+  let replyTo = req.body.email;
   let name = req.body.name;
-  let message = req.body.message;
+  let text = req.body.message;
+  let subject = `${name} @ ${replyTo} contacted you through VitBenton.com!`;
 
-  console.log(sender);
-
-  if (!validator.isEmpty(sender) && !validator.isEmpty(name) && !validator.isEmpty(message) && validator.isEmail(sender)) {
-
-    console.log(`Email sent from: ${sender}`);
+  if (!validator.isEmpty(replyTo) && !validator.isEmpty(name) && !validator.isEmpty(text) && validator.isEmail(replyTo)) {
 
     const transporter = nodemailer.createTransport({
       service: process.env.EMAIL_SER,
@@ -67,10 +64,10 @@ app.post("/contact", (req, res) => {
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      replyTo: sender,
+      replyTo,
       to: process.env.EMAIL_REC,
-      subject: `${sender} contacted you through VitBenton.com!`,
-      text: message
+      subject,
+      text
     };
 
     transporter.sendMail(mailOptions, (error, info) => {
