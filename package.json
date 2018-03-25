@@ -6,10 +6,10 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "dotenv": "^4.0.0",
-    "express": "^4.15.4",
-    "nodemailer": "^4.6.2",
-    "nodemon": "^1.17.1",
-    "npm": "^5.7.1",
+    "express": "^4.16.3",
+    "nodemailer": "^4.6.3",
+    "nodemon": "^1.17.2",
+    "npm": "^5.8.0",
     "validator": "^8.2.0"
   },
   "devDependencies": {
@@ -17,7 +17,7 @@
     "gulp-autoprefixer": "^4.1.0",
     "gulp-concat": "^2.6.1",
     "gulp-livereload": "^3.8.1",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^3.2.1",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "gulp-uglify-es": "^1.0.1",

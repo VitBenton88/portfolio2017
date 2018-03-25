@@ -1,12 +1,14 @@
 /* RESUME */
 .resumeRow {
   background-color: $white;
+  padding-bottom: 50px;
 
   #resume {
     font-size: 16px;
     text-align: left;
     padding-top: 50px;
     margin-top: 2px;
+
     @include mobile-portrait-max {
       padding-top: 10px;
     }
