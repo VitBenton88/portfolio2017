@@ -31,7 +31,7 @@ app.use(bodyParser.json({
 // =============================================================
 
 // permit access to public file
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/public'), {maxage: '1y'}));
 
 // homepage route
 app.get("/", (req, res) => {
