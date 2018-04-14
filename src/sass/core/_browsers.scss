@@ -1,6 +1,6 @@
 /* ios */
-.ua-ios {
+.ua-ios.ua-safari {
     #header {
-        height: calc(100vh - 69px);
+        height: calc(100vh - 69px); //account for bottom nav bar on safari ios
     }
 }
