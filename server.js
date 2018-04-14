@@ -43,6 +43,17 @@ app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "public/index.html"));
 });
 
+//handle Googles robots
+app.get('/robots.txt', function (req, res) {
+    res.type('text/plain');
+    res.send("User-agent: *\nDisallow: /");
+});
+
+//handle sitemap request
+app.get('/sitemap.xml', function (req, res) {
+    res.sendFile(path.join(__dirname, "public/sitemap.xml"));
+});
+
 // Email
 // =============================================================
 
