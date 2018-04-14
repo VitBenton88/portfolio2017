@@ -20,7 +20,7 @@ $(document).ready(() => {
     const projectsArr = [
       {
         id: "simpsonsModal",
-        title: "<i>The Simpsons</i> Trivia Game",
+        title: "The Simpsons Trivia Game",
         imgSrc: "assets/images/simpsons_trivia.jpg",
         techs: [html, css, js, jQuery],
         role: "Sole Developer & Designer",
@@ -63,9 +63,9 @@ $(document).ready(() => {
     let projects = projectsArr.map(project => `
       <div data-target="#${project.id}" class="col-sm-4 col-xs-12 col-sm-offset-1 portfolioIcons">
           <h5>${project.title}</h5>
-          <img src="${project.imgSrc}">
+          <img src="${project.imgSrc}" alt="${project.title} Image">
           <div class="overlay">
-            ${project.techs.map(tech => `<img class="tech" src="${tech}">`).join('')}
+            ${project.techs.map(tech => `<img class="tech" src="${tech}" alt="Tech Icon">`).join('')}
           </div>
       </div>
       <div id="${project.id}" class="modal fade" role="dialog">
