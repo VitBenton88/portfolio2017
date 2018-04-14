@@ -11,6 +11,7 @@ const livereload = require('gulp-livereload');
 
 //paths
 const paths = {
+  libSrc: 'src/libs/**/*.js',
   root: '/',
   src: 'public/assets',
   scripts: 'src/js/*.js',
@@ -20,13 +21,26 @@ const paths = {
 
 // gulp.tasks
 
-// minify & concat js
+// minify & concat custom js
 gulp.task('scripts', (cb) => {
   pump([
       gulp.src(paths.scripts),
       sourcemaps.init(),
       concat('all.min.js'),
       uglifyjs(),
+      sourcemaps.write(paths.root),
+      gulp.dest(paths.src)
+    ],
+    cb
+  );
+});
+
+// combine js libraries
+gulp.task('libraries', (cb) => {
+  pump([
+      gulp.src(paths.libSrc),
+      sourcemaps.init(),
+      concat('lib.min.js'),
       sourcemaps.write(paths.root),
       gulp.dest(paths.src)
     ],
@@ -58,4 +72,4 @@ gulp.task('watch', () => {
 });
 
 //define default gulp task
-gulp.task('default', ['scripts', 'sass']);
+gulp.task('default', ['libraries', 'scripts', 'sass']);

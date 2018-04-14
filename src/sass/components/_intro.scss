@@ -1,9 +1,10 @@
 #header {
-  height: 100vh;
-  width: auto;
   background: linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url("images/compressed/bulb2.jpg");
   background-size: cover;
   color: $white;
+  height: 100vh;
+  position: relative;
+  width: auto;
 
   h1 {
     font-family: $header-fonts;
@@ -13,24 +14,18 @@
   }
 
   #headerText {
-    text-align: center;
     font-size: 18px;
-    margin-bottom: 500px;
-    @include mobile-portrait-max {
-      margin-bottom: 206px;
-    }
-    @include mobile-landscape-min {
-      margin-bottom: 70px;
-    }
-    @include desktop-min {
-      margin-bottom: 500px;
-    }
+    text-align: center;
   }
 
   #learnMore {
-    text-align: center;
+    bottom: 0;
+    left: 0;
     max-width: 300px;
     margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
 
     a {
       text-decoration: none;

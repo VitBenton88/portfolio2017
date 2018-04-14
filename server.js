@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const nodemailer = require('nodemailer');
 const path = require("path");
 const validator = require('validator'); //for contact form validation
-// var email = require('./email.env')
+const compression = require('compression');
 
 //load environment variables
 dotenv.config();
@@ -17,6 +17,7 @@ const app = express();
 let PORT = process.env.PORT || 3000;
 
 // Sets up the Express app to handle data parsing
+app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
   extended: true
