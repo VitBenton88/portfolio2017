@@ -26,28 +26,28 @@ $(document).ready(() => {
     }
   });
 
-
   //--------------------------------
 
   // nav color change on navButton click on mobile:
+
+  $('#nav-icon').click(function(){
+      $(this).toggleClass('open');
+  });
 
   const navButton = $('#mobileNavButton');
   const navLink = $('.navlink');
   const navBarAll = $('.navbar-toggle, .navbar-collapse, .navbar, .collapse');
   const navBar = $('.nav');
   const closeButton = $('.closeIcon');
-  const hamBurgerIcons = $('.fa-bars');
 
   navButton.click(() => {
 
     if (navButton.hasClass('collapsed')) {
       closeButton.show();
-      hamBurgerIcons.hide();
       navBarAll.css('background-color', '#222');
       navBarAll.css('border-color', 'transparent');
     } else {
       closeButton.hide();
-      hamBurgerIcons.show();
       navBarAll.css('background-color', 'transparent');
       navBarAll.css('border-color', '#d8d8d8');
 
