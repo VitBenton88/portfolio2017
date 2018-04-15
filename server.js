@@ -27,11 +27,11 @@ app.use(bodyParser.json({
   type: "application/vnd.api+json"
 }));
 
-// Routes
-// =============================================================
-
 // permit access to public file
 app.use(express.static(path.join(__dirname, '/public'), {maxage: '1y'}));
+
+// Routes
+// =============================================================
 
 // homepage route
 app.get("/", (req, res) => {
