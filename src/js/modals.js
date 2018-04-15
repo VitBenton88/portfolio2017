@@ -1,18 +1,18 @@
 $(document).ready(() => {
 
     const techImgSrcs = {
-      html: "assets/images/html.png",
-      css: "assets/images/css.png",
-      js: "assets/images/js.png",
-      jQuery: "assets/images/jQuery.jpg",
-      bootstrap: "assets/images/bootstrap.png",
-      moment: "assets/images/moment.png",
-      firebase: "assets/images/firebase.png",
-      mongo: "assets/images/nodeJS.png",
-      nodeJS: "assets/images/mongo.png",
-      react: "assets/images/react.png",
-      passport: "assets/images/passport.png",
-      ajax: "assets/images/ajax.png"
+      html: "assets/images/tech_logos/html.png",
+      css: "assets/images/tech_logos/css.png",
+      js: "assets/images/tech_logos/js.png",
+      jQuery: "assets/images/tech_logos/jQuery.jpg",
+      bootstrap: "assets/images/tech_logos/bootstrap.png",
+      moment: "assets/images/tech_logos/moment.png",
+      firebase: "assets/images/tech_logos/firebase.png",
+      mongo: "assets/images/tech_logos/nodeJS.png",
+      nodeJS: "assets/images/tech_logos/mongo.png",
+      react: "assets/images/tech_logos/react.png",
+      passport: "assets/images/tech_logos/passport.png",
+      ajax: "assets/images/tech_logos/ajax.png"
     };
 
     const {html, css, js, jQuery, bootstrap, moment, firebase, nodeJS, mongo, react, passport, ajax} = techImgSrcs;
@@ -21,7 +21,7 @@ $(document).ready(() => {
       {
         id: "simpsonsModal",
         title: "The Simpsons Trivia Game",
-        imgSrc: "assets/images/simpsons_trivia.jpg",
+        imgSrc: "assets/images/project_imgs/simpsons_trivia.jpg",
         techs: [html, css, js, jQuery],
         role: "Sole Developer & Designer",
         bullets: ["Trivia game using JavaScript for logic, jQuery to manipulate HTML, and CSS for styling.", "Questions and timers are dynamically adding using logic in jQuery and Javascript."],
@@ -31,7 +31,7 @@ $(document).ready(() => {
       {
         id: "trainModal",
         title: "Train Scheduler",
-        imgSrc: "assets/images/trainScheduler.jpg",
+        imgSrc: "assets/images/project_imgs/trainScheduler.jpg",
         techs: [bootstrap, moment, js, firebase],
         role: "Sole Developer & Designer",
         bullets: ["Train schedule application that incorporates Firebase to host arrival and departure data. Retrieves and manipulates time data with Moment.js. This app provides up-to-date information about various trains, their arrival times and how many minutes remain until arrival.", "Trains are dynamically added and removed both in the browser and in Firebase by user input. Styling done using the Bootstrap library."],
@@ -41,7 +41,7 @@ $(document).ready(() => {
       {
         id: "guitarKeyModal",
         title: "The Guitar Key",
-        imgSrc: "assets/images/guitarKey.jpg",
+        imgSrc: "assets/images/project_imgs/guitarKey.jpg",
         techs: [nodeJS, mongo, react, passport],
         role: "Sole Developer & Designer",
         bullets: ["User friendly song writing assistant that uses basic musical keys to help users develop their musical acumen. The Guitar Key was developed to be used with a six string guitar. The Guitar Key will also leverage APIs to provide songs to learn alongside the respective key and to provide chord shapes for each chord in the key.", "This is a React JS app that incorporates a MongoDB database with Mongoose and Passport.js with Bcrypt for user authentication."],
