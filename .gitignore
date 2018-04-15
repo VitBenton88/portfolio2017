@@ -1,3 +1,8 @@
 .DS_Store
 .env
 node_modules
+
+# Ignore compiled assets #
+public/assets/*.css
+public/assets/*.js
+public/assets/*.map
