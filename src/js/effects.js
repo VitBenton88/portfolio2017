@@ -8,11 +8,13 @@ $(document).ready(() => {
   // smoothScroll START --------------
 
   const $root = $('html, body');
+  const navIcon = $('#nav-icon');
+  const navLink = $('.navlink');
 
-  $('.navLink').click(function() {
+  navLink.click(function() {
     $root.animate({
       scrollTop: $($(this).attr('href')).offset().top
-    }, 500);
+  }, 500);
     return false;
   });
 
@@ -23,6 +25,7 @@ $(document).ready(() => {
   $('.nav a').on('click', () => {
     if (windowWidth < 599 || windowWidth < 750) { //less than mobile breakpoint, landscape & portrait
       $('.navbar-toggle').click();
+      navIcon.toggleClass('open');
     }
   });
 
@@ -30,12 +33,11 @@ $(document).ready(() => {
 
   // nav color change on navButton click on mobile:
 
-  $('#nav-icon').click(function(){
+  navIcon.click(function(){
       $(this).toggleClass('open');
   });
 
   const navButton = $('#mobileNavButton');
-  const navLink = $('.navlink');
   const navBarAll = $('.navbar-toggle, .navbar-collapse, .navbar, .collapse');
   const navBar = $('.nav');
   const closeButton = $('.closeIcon');
