@@ -11,7 +11,7 @@ $(document).ready(() => {
   const navIcon = $('#nav-icon');
   const navLink = $('.navlink');
 
-  navLink.click(function() {
+  navLink.click(() => {
     $root.animate({
       scrollTop: $($(this).attr('href')).offset().top
   }, 500);
@@ -22,20 +22,20 @@ $(document).ready(() => {
 
   //hide nav bar after selection is made (on smaller screens):
 
-  $('.nav a').on('click', () => {
+  $('.nav a').click(() => {
     if (windowWidth < 599 || windowWidth < 750) { //less than mobile breakpoint, landscape & portrait
       $('.navbar-toggle').click();
       navIcon.toggleClass('open');
     }
   });
 
-  //--------------------------------
-
-  // nav color change on navButton click on mobile:
+  // toggle nav icon animation
 
   navIcon.click(function(){
       $(this).toggleClass('open');
   });
+
+  //--------------------------------
 
   const navButton = $('#mobileNavButton');
   const navBarAll = $('.navbar-toggle, .navbar-collapse, .navbar, .collapse');
