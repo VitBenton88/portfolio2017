@@ -41,7 +41,8 @@ gulp.task('scripts-development', (cb) => {
       sourcemaps.init(),
       concat('all.min.js'),
       sourcemaps.write(paths.root),
-      gulp.dest(paths.src)
+      gulp.dest(paths.src),
+      livereload()
     ],
     cb
   );
@@ -55,10 +56,11 @@ gulp.task('sass-development', () => {
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('style.css'))
     .pipe(sourcemaps.write(paths.root))
-    .pipe(gulp.dest(paths.src));
+    .pipe(gulp.dest(paths.src))
+    .pipe(livereload());
 });
 
-// PRODUCTION gulp.tasks
+// PRODUCTION gulp.tasks //
 
 // combine js libraries - PRODUCTION
 gulp.task('libraries-production', (cb) => {
