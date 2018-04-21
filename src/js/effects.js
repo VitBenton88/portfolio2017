@@ -270,13 +270,12 @@ $(document).ready(() => {
   clearForm = () => {
 
     const contactForm = $('#contactForm');
+    const inputNormalColor = 'rgba(255,255,255, 0.2)'
 
     for (let i = 0; i < contactForm.length; i++) {
       contactForm[i].reset();
-      $("#name").css('background-color', 'white');
-      $("#email").css('background-color', 'white');
-      $("#message").css('background-color', 'white');
     };
+    $("#name, #email, #message").css('background-color', inputNormalColor);
   };
 
   //function for displaying warning colors in form inputs that are empty
@@ -325,9 +324,9 @@ $(document).ready(() => {
     alert(
 
       `Message not sent. Please make sure the form is filled out correctly.\n\n
-            \t• Make sure each field is filled.\n
-            \t• Make sure the provided email is in the correct format:\n
-            \t- e.g. example@example.com`
+            \u00A0• Make sure each field is filled.\n
+            \u00A0• Make sure the provided email is in the correct format:\n
+            \u00A0- e.g. example@example.com`
     );
   };
 
