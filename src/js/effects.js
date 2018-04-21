@@ -4,28 +4,25 @@ $(document).ready(() => {
 
   let windowWidth = $(window).width();
   let windowHeight = $(window).height();
-
-  // smoothScroll START --------------
-
   const $root = $('html, body');
   const navIcon = $('#nav-icon');
   const navLink = $('.navlink');
 
-  navLink.click(() => {
-    $root.animate({
-      scrollTop: $($(this).attr('href')).offset().top
-  }, 500);
-    return false;
-  });
-
   //--------------------------------
 
-  //hide nav bar after selection is made (on smaller screens):
+  // smoothScroll
+  $('.navLink').click(function() {
+  $root.animate({
+    scrollTop: $($(this).attr('href')).offset().top
+  }, 500);
+  return false;
+});
 
+  //hide nav bar after selection is made (on smaller screens):
   $('.nav a').click(() => {
-    if (windowWidth < 599 || windowWidth < 750) { //less than mobile breakpoint, landscape & portrait
-      $('.navbar-toggle').click();
-      navIcon.toggleClass('open');
+    //less than mobile breakpoint, landscape & portrait
+    if (windowWidth < 599 || windowWidth < 750) {
+      navIcon.click();
     }
   });
 

@@ -19,7 +19,7 @@ const paths = {
   sassSrc: 'src/sass/style.scss'
 };
 
-// DEVELOPMENT gulp.tasks
+//// DEVELOPMENT gulp.tasks ////
 
 // combine js libraries - DEVELOPMENT
 gulp.task('libraries-development', (cb) => {
@@ -60,7 +60,7 @@ gulp.task('sass-development', () => {
     .pipe(livereload());
 });
 
-// PRODUCTION gulp.tasks //
+//// PRODUCTION gulp.tasks ////
 
 // combine js libraries - PRODUCTION
 gulp.task('libraries-production', (cb) => {
