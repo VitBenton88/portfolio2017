@@ -286,17 +286,18 @@ $(document).ready(() => {
     let nameInput = $("#name").val().trim();
     let emailInput = $("#email").val().trim();
     let messageInput = $("#message").val().trim();
+    const inputWarningColor = 'rgba(255, 228, 178, 0.9)'
 
     if (nameInput == '') {
-      $("#name").css('background-color', '#ffe4b2');
+      $("#name").css('background-color', inputWarningColor);
     }
 
     if (emailInput == '') {
-      $("#email").css('background-color', '#ffe4b2');
+      $("#email").css('background-color', inputWarningColor);
     }
 
     if (messageInput == '') {
-      $("#message").css('background-color', '#ffe4b2');
+      $("#message").css('background-color', inputWarningColor);
     }
   };
 
