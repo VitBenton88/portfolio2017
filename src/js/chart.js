@@ -1,4 +1,4 @@
-$(window).load( () => {
+$(document).ready( () => {
 
     // chart JS START --------------
     const htmlData = 70;

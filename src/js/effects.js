@@ -209,6 +209,7 @@ $(document).ready(() => {
     }, 300);
 
   });
+
   //send button
   $(sendBTN).click(() => {
 
@@ -219,7 +220,6 @@ $(document).ready(() => {
   });
 
   //social links and email address
-
   $(socialIcon).hover(function() {
     if (BTNstate) {
       $(this).animate({
@@ -324,9 +324,9 @@ $(document).ready(() => {
     alert(
 
       `Message not sent. Please make sure the form is filled out correctly.\n\n
-            \u00A0• Make sure each field is filled.\n
-            \u00A0• Make sure the provided email is in the correct format:\n
-            \u00A0- e.g. example@example.com`
+            • Make sure each field is filled.\n
+            • Make sure the provided email is in the correct format:\n
+            - e.g. example@example.com`
     );
   };
 
