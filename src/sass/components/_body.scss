@@ -4,3 +4,7 @@ body {
   line-height: 2;
   position: relative;
 }
+
+::selection {
+    background: $faded-white;
+}

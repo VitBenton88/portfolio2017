@@ -1,5 +1,10 @@
 /* RESUME */
 .resumeRow {
+
+::selection {
+    background: $light-grey;
+}
+
   background-color: $white;
   padding-bottom: 50px;
 

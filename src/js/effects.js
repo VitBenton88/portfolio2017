@@ -144,7 +144,6 @@ $(document).ready(() => {
     if (BTNstate) {
       $(this).animate({
         color: "#9f6379"
-
       }, 200);
     } else {
       $(this).animate({
@@ -187,7 +186,6 @@ $(document).ready(() => {
         backgroundColor: "white",
         color: "#9f6379",
         width: 240
-
       }, 200);
     } else {
       $(this).animate({
@@ -207,7 +205,6 @@ $(document).ready(() => {
     $(this).animate({
       color: "white"
     }, 300);
-
   });
 
   //send button
@@ -216,7 +213,6 @@ $(document).ready(() => {
     $(this).animate({
       color: "white"
     }, 300);
-
   });
 
   //social links and email address
@@ -238,7 +234,6 @@ $(document).ready(() => {
     if (BTNstate) {
       $(this).animate({
         color: "#222222",
-
       }, 200);
     } else {
       $(this).animate({
