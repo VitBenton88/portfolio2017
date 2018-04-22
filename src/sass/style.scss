@@ -1,5 +1,4 @@
 /* CORE */
-@import "core/browsers";
 @import "core/colors";
 @import "core/fonts";
 
@@ -16,3 +15,6 @@
 @import "components/resume";
 @import "components/contact";
 @import "components/footer";
+
+/* COMPONENTS */
+@import "core/browsers";
