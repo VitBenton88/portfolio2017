@@ -126,6 +126,7 @@
       form {
         width: 50%;
         margin: auto;
+
         @include mobile-portrait-max {
           width: 100%;
         }
@@ -137,6 +138,11 @@
             border: none !important;
             background: $faded-white;
             color: $white;
+
+            &:focus {
+                outline: none !important;
+                box-shadow: 0 0 6px $white;
+            }
         }
       }
 
