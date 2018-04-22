@@ -3,4 +3,10 @@
     #header {
         height: calc(100vh - 69px); //account for bottom nav bar on safari ios
     }
+
+    #contact {
+        .form-control{
+            font-size: 16px;
+        }
+    }
 }
